@@ -1,0 +1,51 @@
+#music-pirate , #music-pirate a, #music-pirate img{
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+display: block;
+line-height: 1;
+
+}
+#music-pirate {
+position: fixed;
+bottom: 0;
+width: 46px;
+z-index: 2147483647;
+}
+.priate-left{
+left: 0;
+}
+.priate-left #moveleft{
+display: none;
+}
+.priate-left #moveright{
+display: inline-block;
+}
+
+.priate-right{
+right: 0;
+}
+.priate-right #moveleft{
+display: inline-block;
+}
+.priate-right #moveright{
+display: none;
+}
+
+#music-pirate  a{
+display: inline-block;
+height: 32px;
+cursor:pointer;
+}
+#music-pirate  #moveleft img, #music-pirate  #moveright img{
+display: none;
+}
+#music-pirate  a#moveleft:hover img, #music-pirate  a#moveright:hover img{
+display: inline;
+}
+#music-pirate  a#moveleft, #music-pirate  a#moveright{
+width: 14px;
+}
