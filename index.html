@@ -16,6 +16,10 @@
       })
     </script>
 <title>声海盗 by seekerlee</title>
+<STYLE type="text/css">
+  .playerup   {position: fixed; bottom: 0px; right: 0px; text-align: right;}
+  .playerdown {position: fixed; bottom: -335px; right: 0px; text-align: right;}
+</STYLE>
 </head>
 <body>
 <a id="forkme_banner" href="https://github.com/seekerlee/Sound-Pirate">View on GitHub</a>
@@ -101,8 +105,8 @@
 	<span class="octocat"></span>
 	</footer>
 </div>
-<div style="position: fixed; bottom: 0px; right: 0px; width: 240px;">
-	<embed src="http://www.xiami.com/widget/1938672_16542226_235_335_7b324e_567990_0/collectPlayer.swf" type="application/x-shockwave-flash" width="235" height="335" wmode="opaque"></embed>
+<div id='xiamiplayer' class='playerup' style=""><span style=''><a id='playerpop' style='cursor: pointer;'>+</a><a id='playermin' style='cursor: pointer;'>-</a></span>
+	<embed style='display: block' src="http://www.xiami.com/widget/1938672_16542226_235_335_7b324e_567990_0/collectPlayer.swf" type="application/x-shockwave-flash" width="235" height="335" wmode="opaque"></embed>
 </div>
 <script type="text/javascript">
 var jiathis_config={
@@ -111,6 +115,14 @@ var jiathis_config={
 	title:"chrome插件：#声海盗#",
 	hideMore:false
 }
+$(function(){
+  $('#playerpop').click(function(){
+    $('#xiamiplayer').attr("class","").addClass("playerup");
+  });
+  $('#playermin').click(function(){
+    $('#xiamiplayer').attr("class","").addClass("playerdown");
+  });
+});
 </script>
 <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
 </body>
