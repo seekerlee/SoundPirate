@@ -28,6 +28,8 @@ onMsg.addListener(
           localStorage.piratePosition = 'priate-left';
         });
       });
+	  var stopProp = function(e) {e.stopPropagation();};
+	  $('#dlink').mousedown(stopProp).keydown(stopProp).click(stopProp); //prevent parent event
     }
     console.log(request.desc);
     console.log(request.musicUrl);
