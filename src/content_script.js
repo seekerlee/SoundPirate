@@ -37,12 +37,12 @@ onMsg.addListener(
     var musicUrl = request.musicUrl;
     //xiami radio will preload the next song
     if(thisUrl.indexOf('www.xiami.com/radio') > 0) {
+      if(requestQ.indexOf(musicUrl) != -1) return; //when download, another request will be fired. Drop this.
       requestQ.push(request.musicUrl);
       if(requestQ.length > 2) {
         requestQ.shift();
       }
       musicUrl = requestQ[0];
-      console.log(requestQ);
     }
     if(thisUrl.indexOf('www.xiami.com') > 0) {
       filename = document.title.substr(0, document.title.indexOf('—'));
@@ -66,6 +66,8 @@ onMsg.addListener(
       filename = document.title.substr(0, document.title.indexOf(' - '));
     } else if(thisUrl.indexOf('player.mbox.sogou.com') > 0) {
       filename = document.title.substr(5, document.title.indexOf('-搜狗音乐') - 5);
+    } else if(thisUrl.indexOf('soundcloud.com') > 0) {
+      filename = document.title;
     }
     if(!filename) {
       filename = filenamep.exec(musicUrl);
