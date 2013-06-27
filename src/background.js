@@ -1,4 +1,4 @@
-chrome.webRequest.onHeadersReceived.addListener(
+chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", musicUrl: info.url});
     console.log('info sent');
@@ -7,6 +7,7 @@ chrome.webRequest.onHeadersReceived.addListener(
   {
     urls: [
       "http://*/*.mp3*",
+      "https://*/*.mp3*",
       "http://*.file.xiami.com/h/*" //for xiami vip
     ],
     types:[

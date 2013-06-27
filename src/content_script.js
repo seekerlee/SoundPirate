@@ -38,10 +38,11 @@ onMsg.addListener(
     //xiami radio will preload the next song
     if(thisUrl.indexOf('www.xiami.com/radio') > 0) {
       requestQ.push(request.musicUrl);
-      musicUrl = requestQ[0];
-      if(requestQ.length >= 2) {
+      if(requestQ.length > 2) {
         requestQ.shift();
       }
+      musicUrl = requestQ[0];
+      console.log(requestQ);
     }
     if(thisUrl.indexOf('www.xiami.com') > 0) {
       filename = document.title.substr(0, document.title.indexOf('—'));
