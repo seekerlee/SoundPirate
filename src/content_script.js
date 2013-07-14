@@ -1,4 +1,4 @@
-﻿//TODO: iframes! m4a, aac format!
+﻿//TODO: m4a, aac format! i18n! jing.fm 酷我
 var thisUrl = document.URL;
 var filenamep = /\w*\.mp3/i;
 var imgURL = chrome.extension.getURL("images/music32.png");
