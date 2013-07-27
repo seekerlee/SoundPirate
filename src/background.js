@@ -16,6 +16,34 @@ chrome.webRequest.onBeforeRequest.addListener(
 });
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
+    chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'aac', type: 'music'});
+    console.log('info sent');
+  },
+  {
+    urls: [
+      "http://*/*.aac*",
+      "https://*/*.aac*"
+    ],
+    types:[
+      "other", "object"
+    ]
+});
+chrome.webRequest.onBeforeRequest.addListener(
+  function(info) {
+    chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'm4a', type: 'music'});
+    console.log('info sent');
+  },
+  {
+    urls: [
+      "http://*/*.m4a*",
+      "https://*/*.m4a*"
+    ],
+    types:[
+      "other", "object"
+    ]
+});
+chrome.webRequest.onBeforeRequest.addListener(
+  function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new playlist!", url: info.url, type: 'xiami_play_list'});
     console.log('info sent');
   },

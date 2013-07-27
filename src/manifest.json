@@ -1,7 +1,7 @@
 ﻿{
   "name": "声海盗",
-  "version": "1.4.2",
-  "description": "下载在线音乐插件，支持豆瓣，虾米，SongTaste，落网，人人电台，QQ音乐，网易云音乐，新浪乐库，搜狗音乐，QQ音乐电台等",
+  "version": "1.5.0",
+  "description": "下载在线音乐插件，支持豆瓣，虾米，Jing.fm，SongTaste，落网，人人电台，QQ音乐，网易云音乐，新浪乐库，搜狗音乐，QQ音乐电台等",
   "manifest_version": 2,
   "permissions": ["webRequest", "activeTab","tabs", "webRequestBlocking",
                   "<all_urls>"],
@@ -22,7 +22,9 @@
        "images/music32.png",
        "images/music48.png",
        "images/arrowl32.png",
-       "images/arrowr32.png"
+       "images/arrowr32.png",
+       "images/m4a32.png",
+       "images/aac32.png"
   ],
   "icons" : {
     "16" : "images/music16.png",

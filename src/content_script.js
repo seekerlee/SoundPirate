@@ -1,7 +1,9 @@
 ﻿//TODO: m4a, aac format! i18n! jing.fm 酷我
 var thisUrl = document.URL;
-var filenamep = /\w*\.mp3/i;
-var imgURL = chrome.extension.getURL("images/music32.png");
+var filenamep = /(?=\w*\.mp3)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
+var imgURL_MP3 = chrome.extension.getURL("images/music32.png");
+var imgURL_AAC = chrome.extension.getURL("images/aac32.png");
+var imgURL_M4A = chrome.extension.getURL("images/m4a32.png");
 var imgURLLeftA = chrome.extension.getURL("images/arrowl32.png");
 var imgURLRightA = chrome.extension.getURL("images/arrowr32.png");
 var divId = "music-pirate";
@@ -12,7 +14,7 @@ onMsg.addListener(
   function(request, sender, sendResponse) {
     var onMusicReceive = function() {
       if(!document.getElementById(divId)) {
-        $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="move left"><img src="' + imgURLLeftA + '"/></a><a id="dlink"><img src="' + imgURL + '"/></a><a id="moveright" title="move right"><img src="' + imgURLRightA + '"/></a></div>');
+        $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="move left"><img src="' + imgURLLeftA + '"/></a><a id="dlink"><img src="' + imgURL_MP3 + '"/></a><a id="moveright" title="move right"><img src="' + imgURLRightA + '"/></a></div>');
         $("#moveright").click(function(){
           $("#moveright").css("display", "none");
           $("#music-pirate").animate({left: document.body.clientWidth - 32}, 500, 'swing', function(){
@@ -34,6 +36,7 @@ onMsg.addListener(
       }
       console.log(request.desc);
       console.log(request.url);
+      console.log(request.format);
       var filename;
       var url = request.url;
       //xiami radio will preload the next song
@@ -63,6 +66,15 @@ onMsg.addListener(
         filename = $('.mid_tit').text();
       } else if(thisUrl.indexOf('www.songtaste.com/playmusic.php') > 0) {
         filename = $.trim($('#songInfo a').text());
+      } else if(thisUrl.indexOf('jing.fm') > 0) { //http://cc.cdn.jing.fm/201307271917/310d548af7024a96eb680a5be85f1105/2012/0716/07/NX/2012071607NXJ.m4a?start=68
+        var qkPlayBtnSelected = $('.topCvCtn .qkPlay .selected');
+        console.log(qkPlayBtnSelected.size());
+        if(qkPlayBtnSelected.size() > 0) {
+          filename = $('.trckTit', qkPlayBtnSelected.parent()).text();
+        } else {
+          filename = $.trim($('#mscPlr .tit').text());
+        }
+        url = url.substr(0, url.indexOf('?'));
       } else if(thisUrl.indexOf('fm.renren.com') > 0) {
         filename = $('#song_name').text() + ' - ' +$('#artist_name a[title]').text();
       } else if(thisUrl.indexOf('play.baidu.com') > 0) {
@@ -83,7 +95,7 @@ onMsg.addListener(
       if(!filename) {
         filename = filenamep.exec(url);
       } else {
-        filename = filename + '.mp3'
+        filename = filename + '.' + request.format;
       }
       $('#dlink').attr('download', filename).attr('title', filename).attr('href', url);
       (function(deg){
@@ -97,6 +109,11 @@ onMsg.addListener(
         };
         ro();
       })(12);
+      if(request.format === 'aac') {
+        $("#music-pirate #dlink img")[0].src = imgURL_AAC;
+      } else if(request.format === 'm4a') {
+        $("#music-pirate #dlink img")[0].src = imgURL_M4A;
+      }
     };
     if(request.type === 'music') {
       onMusicReceive();
