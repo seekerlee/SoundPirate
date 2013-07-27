@@ -1,4 +1,4 @@
-﻿//TODO: m4a, aac format! i18n! jing.fm 酷我
+﻿//TODO: i18n!
 var thisUrl = document.URL;
 var filenamep = /(?=\w*\.mp3)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
 var imgURL_MP3 = chrome.extension.getURL("images/music32.png");
@@ -91,6 +91,8 @@ onMsg.addListener(
         filename = document.title;
       } else if(thisUrl.indexOf('fm.qq.com') > 0) {
         filename = $('#divsongname').text();
+      } else if(thisUrl.indexOf('kuwo.cn') > 0) {
+        filename = document.title.substr(0, document.title.indexOf(' 在线试听'));
       }
       if(!filename) {
         filename = filenamep.exec(url);
