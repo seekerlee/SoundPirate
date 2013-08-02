@@ -93,6 +93,8 @@ onMsg.addListener(
         filename = $('#divsongname').text();
       } else if(thisUrl.indexOf('kuwo.cn') > 0) {
         filename = document.title.substr(0, document.title.indexOf(' 在线试听'));
+      } else if(thisUrl.indexOf('bandcamp.com') > 0) {
+        filename = document.title;
       }
       if(!filename) {
         filename = filenamep.exec(url);

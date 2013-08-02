@@ -8,7 +8,8 @@ chrome.webRequest.onBeforeRequest.addListener(
     urls: [
       "http://*/*.mp3*",
       "https://*/*.mp3*",
-      "http://*.file.xiami.com/h/*" //for xiami vip
+      "http://*.file.xiami.com/h/*", //for xiami vip
+      "http://*.bcbits.com/download/track/*" //for bandcamp.com
     ],
     types:[
       "other", "object"
