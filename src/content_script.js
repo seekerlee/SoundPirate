@@ -67,14 +67,20 @@ onMsg.addListener(
       } else if(thisUrl.indexOf('www.songtaste.com/playmusic.php') > 0) {
         filename = $.trim($('#songInfo a').text());
       } else if(thisUrl.indexOf('jing.fm') > 0) { //http://cc.cdn.jing.fm/201307271917/310d548af7024a96eb680a5be85f1105/2012/0716/07/NX/2012071607NXJ.m4a?start=68
-        var qkPlayBtnSelected = $('.topCvCtn .qkPlay .selected');
-        console.log(qkPlayBtnSelected.size());
-        if(qkPlayBtnSelected.size() > 0) {
-          filename = $('.trckTit', qkPlayBtnSelected.parent()).text();
+        if(thisUrl.indexOf('jing.fm/tracks/') > 0) {
+          filename = document.title.substr(2, document.title.indexOf(' - Jing') - 2);
         } else {
-          filename = $.trim($('#mscPlr .tit').text());
+          var qkPlayBtnSelected = $('.topCvCtn .qkPlay .selected');
+          console.log(qkPlayBtnSelected.size());
+          if(qkPlayBtnSelected.size() > 0) {
+            filename = $('.trckTit', qkPlayBtnSelected.parent()).text();
+          } else {
+            filename = $.trim($('#mscPlr .tit').text());
+          }
         }
-        url = url.substr(0, url.indexOf('?'));
+        if(url.indexOf('?') > 0) {
+          url = url.substr(0, url.indexOf('?'));
+        }
       } else if(thisUrl.indexOf('fm.renren.com') > 0) {
         filename = $('#song_name').text() + ' - ' +$('#artist_name a[title]').text();
       } else if(thisUrl.indexOf('play.baidu.com') > 0) {
@@ -95,6 +101,8 @@ onMsg.addListener(
         filename = document.title.substr(0, document.title.indexOf(' 在线试听'));
       } else if(thisUrl.indexOf('bandcamp.com') > 0) {
         filename = document.title;
+      } else if(thisUrl.indexOf('indievox.com') > 0) {
+        filename = $('#songLink').text() + " - " + $('#artistLink').text() + " - " + $('#albumLink').text();
       }
       if(!filename) {
         filename = filenamep.exec(url);

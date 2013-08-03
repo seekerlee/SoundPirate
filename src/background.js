@@ -9,7 +9,8 @@ chrome.webRequest.onBeforeRequest.addListener(
       "http://*/*.mp3*",
       "https://*/*.mp3*",
       "http://*.file.xiami.com/h/*", //for xiami vip
-      "http://*.bcbits.com/download/track/*" //for bandcamp.com
+      "http://*.bcbits.com/download/track/*", //for bandcamp.com
+      "https://*.indievox.com/audio-streamer.php*"
     ],
     types:[
       "other", "object"
