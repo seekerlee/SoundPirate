@@ -1,0 +1,14 @@
+{
+  "name": {
+    "message": "聲海盜"
+  },
+  "description": {
+    "message": "下載在線音樂插件，支持豆瓣，蝦米，Jing.fm，SongTaste，落網，人人電台，QQ音樂，網易云音樂，新浪樂庫，搜狗音樂，QQ音樂電台，酷我，SoundCloud，bandcamp.com， indievox.com等"
+  },
+  "moveleft": {
+    "message": "靠左"
+  },
+  "moveright": {
+    "message": "靠右"
+  }
+}

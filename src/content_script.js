@@ -14,7 +14,7 @@ onMsg.addListener(
   function(request, sender, sendResponse) {
     var onMusicReceive = function() {
       if(!document.getElementById(divId)) {
-        $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="move left"><img src="' + imgURLLeftA + '"/></a><a id="dlink"><img src="' + imgURL_MP3 + '"/></a><a id="moveright" title="move right"><img src="' + imgURLRightA + '"/></a></div>');
+        $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="' + chrome.i18n.getMessage("moveleft") + '"><img src="' + imgURLLeftA + '"/></a><a id="dlink"><img src="' + imgURL_MP3 + '"/></a><a id="moveright" title="' + chrome.i18n.getMessage("moveright") + '"><img src="' + imgURLRightA + '"/></a></div>');
         $("#moveright").click(function(){
           $("#moveright").css("display", "none");
           $("#music-pirate").animate({left: document.body.clientWidth - 32}, 500, 'swing', function(){
@@ -103,6 +103,8 @@ onMsg.addListener(
         filename = document.title;
       } else if(thisUrl.indexOf('indievox.com') > 0) {
         filename = $('#songLink').text() + " - " + $('#artistLink').text() + " - " + $('#albumLink').text();
+      } else if(thisUrl.indexOf('music.so.com') > 0) {
+        filename = document.title.substr(0, document.title.indexOf(' - 360音乐盒'));
       }
       if(!filename) {
         filename = filenamep.exec(url);

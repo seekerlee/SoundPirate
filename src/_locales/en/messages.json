@@ -1,0 +1,14 @@
+{
+  "name": {
+    "message": "Sound Pirate"
+  },
+  "description": {
+    "message": "Chrome extension to download online music. Supports SoundCloud, bandcamp.com and many others."
+  },
+  "moveleft": {
+    "message": "move left"
+  },
+  "moveright": {
+    "message": "move right"
+  }
+}
