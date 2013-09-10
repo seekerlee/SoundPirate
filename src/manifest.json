@@ -17,6 +17,7 @@
     }
   ],
   "web_accessible_resources": [
+       "jquery-2.0.2.min.js",
        "images/music16.png",
        "images/music24.png",
        "images/music32.png",

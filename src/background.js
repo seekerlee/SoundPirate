@@ -1,7 +1,9 @@
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music'});
-    console.log('info sent');
+    console.log('info sent0');
+    console.log(info.frameId);
+    console.log(info.parentFrameId );
   },
   // filters
   {
@@ -19,7 +21,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'aac', type: 'music'});
-    console.log('info sent');
+    console.log('info sent1');
   },
   {
     urls: [
@@ -33,7 +35,9 @@ chrome.webRequest.onBeforeRequest.addListener(
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'm4a', type: 'music'});
-    console.log('info sent');
+    console.log('info sent2');
+    console.log(info.frameId);
+    console.log(info.parentFrameId );
   },
   {
     urls: [
@@ -47,7 +51,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new playlist!", url: info.url, type: 'xiami_play_list'});
-    console.log('info sent');
+    console.log('info sent3');
   },
   {
     urls: [

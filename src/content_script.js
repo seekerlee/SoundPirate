@@ -1,5 +1,9 @@
 ﻿//TODO: i18n!
+(function() {
 var thisUrl = document.URL;
+if(  thisUrl.indexOf('mail.google.com') >= 0
+   ||thisUrl.indexOf('plus.google.com') >= 0)
+  return;
 var filenamep = /(?=\w*\.mp3)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
 var imgURL_MP3 = chrome.extension.getURL("images/music32.png");
 var imgURL_AAC = chrome.extension.getURL("images/aac32.png");
@@ -13,10 +17,12 @@ var requestQ = [];
 onMsg.addListener(
   function(request, sender, sendResponse) {
     var onMusicReceive = function() {
+      // frames
+      //if($('body').size() == 0)
       if(!document.getElementById(divId)) {
         $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="' + chrome.i18n.getMessage("moveleft") + '"><img src="' + imgURLLeftA + '"/></a><a id="dlink"><img src="' + imgURL_MP3 + '"/></a><a id="moveright" title="' + chrome.i18n.getMessage("moveright") + '"><img src="' + imgURLRightA + '"/></a></div>');
         $("#moveright").click(function(){
-          $("#moveright").css("display", "none");
+          $(this).css("display", "none");
           $("#music-pirate").animate({left: document.body.clientWidth - 32}, 500, 'swing', function(){
             $("#music-pirate").attr("style","").removeClass("priate-left").addClass("priate-right");
             $("#moveleft").css("display", "inline-block");
@@ -24,7 +30,7 @@ onMsg.addListener(
           });
         });
         $("#moveleft").click(function(){
-          $("#moveleft").css("display", "none");
+          $(this).css("display", "none");
           $("#music-pirate").animate({right: document.body.clientWidth - 46}, 500, 'swing', function(){
             $("#music-pirate").attr("style","").removeClass("priate-right").addClass("priate-left");
             $("#moveright").css("display", "inline-block");
@@ -36,7 +42,6 @@ onMsg.addListener(
       }
       console.log(request.desc);
       console.log(request.url);
-      console.log(request.format);
       var filename;
       var url = request.url;
       //xiami radio will preload the next song
@@ -144,5 +149,5 @@ onMsg.addListener(
     var onXiamiPlayListReceive = function() {
 
     };
-
 });
+})();
