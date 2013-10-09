@@ -15,7 +15,7 @@ onMsg.addListener(
     var onMusicReceive = function() {
       if(!document.getElementById(divId)) {
         $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="' + chrome.i18n.getMessage("moveleft") + '"><img src="' + imgURLLeftA + '"/></a><a id="dlink"><img src="' + imgURL_MP3 + '"/></a><a id="moveright" title="' + chrome.i18n.getMessage("moveright") + '"><img src="' + imgURLRightA + '"/></a></div>');
-        $("#moveright").click(function(){
+        $("#moveright").on('click',function(){
           $("#moveright").css("display", "none");
           $("#music-pirate").animate({left: document.body.clientWidth - 32}, 500, 'swing', function(){
             $("#music-pirate").attr("style","").removeClass("priate-left").addClass("priate-right");
@@ -23,7 +23,7 @@ onMsg.addListener(
             localStorage.piratePosition = 'priate-right';
           });
         });
-        $("#moveleft").click(function(){
+        $("#moveleft").on('click',function(){
           $("#moveleft").css("display", "none");
           $("#music-pirate").animate({right: document.body.clientWidth - 46}, 500, 'swing', function(){
             $("#music-pirate").attr("style","").removeClass("priate-right").addClass("priate-left");
