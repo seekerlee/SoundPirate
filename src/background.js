@@ -17,14 +17,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(info) {
 });
 
 chrome.webRequest.onBeforeRequest.addListener(function(info) {
-	chrome.tabs.sendMessage(info.tabId, {
-		desc : "You got a new ad!",
-		url : info.url,
-		obj:info,
-		format : 'flv',
-		type : 'video'
-	});
-	conso
+
 	return {cancel: true};
 },
 // filters
