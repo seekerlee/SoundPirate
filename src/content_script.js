@@ -110,7 +110,22 @@ onMsg.addListener(
         filename = $('#songLink').text() + " - " + $('#artistLink').text() + " - " + $('#albumLink').text();
       } else if(thisUrl.indexOf('music.so.com') > 0) {
         filename = document.title.substr(0, document.title.indexOf(' - 360音乐盒'));
+      } else if(thisUrl.indexOf('5sing.com') > 0) {
+			if(thisUrl.indexOf('fc.5sing.com') > 0) {
+			// 5sing 翻唱
+				filename = $('.mc_info h1').text() + ' - ' + $('.blue strong').text();
+			} else if(thisUrl.indexOf('yc.5sing.com') > 0){
+			// 5sing  原创
+				filename = $('.mc_info h1').text() + ' - ' + $('.blue strong').text();
+			} else if(thisUrl.indexOf('bz.5sing.com') > 0){
+			// 5sing 伴奏
+				filename = $('.play_intro_tit h1').text();
+			} else if(thisUrl.indexOf('fm.5sing.com') > 0){
+			// 5sing 电台
+				filename = $('.sup span a').text();
+			}
       }
+	  
       if(!filename) {
         filename = filenamep.exec(url);
       } else {
