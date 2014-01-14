@@ -1,6 +1,6 @@
 ﻿{
   "name": "__MSG_name__",
-  "version": "1.6.1",
+  "version": "1.6.3",
   "description": "__MSG_description__",
   "manifest_version": 2,
   "permissions": ["webRequest", "activeTab","tabs", "webRequestBlocking",

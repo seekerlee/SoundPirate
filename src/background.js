@@ -2,8 +2,8 @@ chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music'});
     console.log('info sent0');
-    console.log(info.frameId);
-    console.log(info.parentFrameId );
+    console.log(info.requestBody);
+    console.log(info );
   },
   // filters
   {
@@ -17,7 +17,26 @@ chrome.webRequest.onBeforeRequest.addListener(
     types:[
       "other", "object"
     ]
-});
+  }
+);
+chrome.webRequest.onBeforeRequest.addListener(
+  function(info) {
+    chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music', requestBody: info.requestBody});
+    console.log('info sent0');
+    console.log(info.requestBody);
+    console.log(info );
+  },
+  // filters
+  {
+    urls: [
+      "http://*.grooveshark.com/stream.php*"
+    ],
+    types:[
+      "other", "object"
+    ]
+  },
+  ['requestBody']
+);
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'aac', type: 'music'});
