@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4391c16d-f992-48bb-af71-8d7ecd9061c8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/background.js" afterPath="$PROJECT_DIR$/src/background.js" />
+    </list>
+    <ignored path="Sound-Pirate.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1391113769299" ignored="false" />
+    <file path="/background.js" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387395415255" ignored="false" />
+    <file path="/content_script.js" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1391116010562" ignored="false" />
+    <file path="D:/inspi_site/KWTravel/wp-content/themes/kwclinic/index.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387472686279" ignored="false" />
+    <file path="/index.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387472686637" ignored="false" />
+    <file path="D:/inspi_site/KWTravel/wp-content/themes/kwclinic/style.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387473035626" ignored="false" />
+    <file path="/style.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387569320743" ignored="false" />
+    <file path="D:/inspi_site/KWTravel/wp-content/themes/kwclinic/css/min768.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387471373365" ignored="false" />
+    <file path="/min768.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387471300265" ignored="false" />
+    <file path="/a.dummy" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1388765833533" ignored="false" />
+    <file path="D:/inspi_site/KWTravel/wp-content/themes/kwclinic/css/base.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387471442760" ignored="false" />
+    <file path="/base.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387471404754" ignored="false" />
+    <file path="D:/inspi_site/KWTravel/wp-content/themes/kwclinic/footer.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387471823439" ignored="false" />
+    <file path="D:/inspi_site/KWTravel/wp-content/themes/kwclinic/header.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387472836259" ignored="false" />
+    <file path="D:/inspi_site/KWTravel/wp-content/themes/kwclinic/js/init.js" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387478557731" ignored="false" />
+    <file path="D:/inspi_site/Del/wp-content/themes/medicenter/header.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387481988442" ignored="false" />
+    <file path="D:/inspi_site/Del/wp-content/themes/medicenter/footer.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387484794835" ignored="false" />
+    <file path="/footer.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387568946986" ignored="false" />
+    <file path="D:/inspi_site/Del/wp-content/themes/medicenter/custom.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387485209178" ignored="false" />
+    <file path="/custom.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387485148839" ignored="false" />
+    <file path="D:/inspi_site/Alliance/wp-content/themes/alliance/parts/shared/footer.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387568956736" ignored="false" />
+    <file path="D:/inspi_site/Alliance/wp-content/themes/alliance/parts/shared/html-footer.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387567690664" ignored="false" />
+    <file path="/html-footer.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387567682842" ignored="false" />
+    <file path="D:/inspi_site/Alliance/wp-content/themes/alliance/style.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387569321056" ignored="false" />
+    <file path="D:/inspi_site/Alliance/wp-content/themes/alliance/page-apply.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1387569653233" ignored="false" />
+    <file path="D:/inspi_site/Alliance/wp-content/themes/alliance/page-us-apply.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1388762443886" ignored="false" />
+    <file path="D:/inspi_site/bigmoo/wp-content/themes/bigmoo/admin/common-functions.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1388764548292" ignored="false" />
+    <file path="/common-functions.php" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1388764547932" ignored="false" />
+    <file path="/content_style.css" changelist="4391c16d-f992-48bb-af71-8d7ecd9061c8" time="1391115948857" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Sound-Pirate" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="background.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/background.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="510" selection-end="510" vertical-scroll-proportion="0.38946164">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_script.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/content_script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="44" column="56" selection-start="2488" selection-end="2488" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#1681#2044#0" expanded="false" />
+                <element signature="e#2749#2974#0" expanded="false" />
+                <element signature="e#3020#3407#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content_style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/content_style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="24" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/content_style.css" />
+        <option value="$PROJECT_DIR$/src/content_script.js" />
+        <option value="$PROJECT_DIR$/src/background.js" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sound-Pirate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sound-Pirate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sound-Pirate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sound-Pirate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sound-Pirate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="options.lastSelected" value="fileColors" />
+    <property name="FullScreen" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+  </component>
+  <component name="PublishConfig" promptOnRemoteOverwrite="CHECK_TIMESTAMP" autoUpload="true" uploadOnSaveAll="true">
+    <servers>
+      <server id="095e36b4-0453-42a5-b502-a2b6120ac5e2">
+        <serverdata />
+      </server>
+      <server id="11b494d7-620c-4729-832e-2481681ad569">
+        <serverdata />
+      </server>
+      <server id="26987b29-86f4-4f4e-bf43-dcf4a77d5a2f">
+        <serverdata />
+      </server>
+      <server id="27610053-2a4b-49f7-84b5-4c9421cff33e">
+        <serverdata />
+      </server>
+      <server id="3eb23906-98f0-4459-b8dd-6dab0000f829">
+        <serverdata />
+      </server>
+      <server id="4e407cbb-90aa-453d-ba67-32ef7a0c9a4d">
+        <serverdata />
+      </server>
+      <server id="630fd1c9-750d-484b-bc02-a8136c9db4b7">
+        <serverdata />
+      </server>
+      <server id="6a570f73-37fc-4e60-ab5a-14de7b6505a3">
+        <serverdata />
+      </server>
+      <server id="7752c263-fa06-4e34-9f36-d953a5661f7b">
+        <serverdata />
+      </server>
+      <server id="7ba2f1ca-edda-4d2f-8d68-0aaffbb2e6d8">
+        <serverdata />
+      </server>
+      <server id="8b63a412-e5d7-423a-802b-c22c06ef4166">
+        <serverdata />
+      </server>
+      <server id="8e0cdbb7-0192-4ceb-9db6-069d9ce40faf">
+        <serverdata />
+      </server>
+      <server id="9fb65e2f-4632-4907-a564-cd5eaf5496d1">
+        <serverdata />
+      </server>
+      <server id="b60fa2da-0cd3-42d8-89c8-81ae396a17d8">
+        <serverdata />
+      </server>
+      <server id="be5e2569-9ea2-4955-b17c-c346fafca888">
+        <serverdata />
+      </server>
+      <server id="bf7ed141-475d-4bb4-8620-e60d90fd4c79">
+        <serverdata />
+      </server>
+      <server id="ce13a78b-cd5f-4a1b-ba02-cfd50f52ab7a">
+        <serverdata />
+      </server>
+      <server id="da62f2de-3339-41ea-b3e9-c9c43c52470d">
+        <serverdata />
+      </server>
+      <server id="f45d05db-84b8-4945-aef7-cc31948fa62d">
+        <serverdata />
+      </server>
+    </servers>
+  </component>
+  <component name="RunManager">
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4391c16d-f992-48bb-af71-8d7ecd9061c8" name="Default" comment="" />
+      <created>1387393288223</created>
+      <updated>1387393288223</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19530416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="34" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1681#2044#0" expanded="false" />
+            <element signature="e#2749#2974#0" expanded="false" />
+            <element signature="e#3020#3407#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="34" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1681#2044#0" expanded="false" />
+            <element signature="e#2749#2974#0" expanded="false" />
+            <element signature="e#3020#3407#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="34" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1681#2044#0" expanded="false" />
+            <element signature="e#2749#2974#0" expanded="false" />
+            <element signature="e#3020#3407#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="34" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1681#2044#0" expanded="false" />
+            <element signature="e#2749#2974#0" expanded="false" />
+            <element signature="e#3020#3407#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="24" selection-start="837" selection-end="837" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/content_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="56" selection-start="2488" selection-end="2488" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1681#2044#0" expanded="false" />
+            <element signature="e#2749#2974#0" expanded="false" />
+            <element signature="e#3020#3407#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="510" selection-end="510" vertical-scroll-proportion="0.38946164">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

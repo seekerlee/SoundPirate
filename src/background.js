@@ -16,27 +16,6 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 		types : ["other", "object"]
 	});
 
-chrome.webRequest.chrome.webRequest.onCompleted.addListener(function (info) {
-		console.log('got the list');
-
-	},
-	{
-		urls  : ["*://douban.fm/j*playlist"],
-		types : ["xmlhttprequest", "other",'json']
-	}
-
-);
-/*.addListener(function (info) {
- console.log('got the list');
-
- },
- {
- urls  : ["*://douban.fm/j*playlist"],
- types : ["xmlhttprequest", "other"]
- }
-
- );
- */
 
 chrome.webRequest.onBeforeRequest.addListener(function (info) {
 		return {cancel : true};
