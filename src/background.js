@@ -7,7 +7,6 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 			type   : 'music'
 		});
 
-
 	},
 // filters
 	{
@@ -16,17 +15,18 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 			"https://*.indievox.com/audio-streamer.php*"],
 		types : ["other", "object"]
 	});
-/*
- chrome.webRequest.chrome.webRequest.onCompleted.addListener(function (info) {
- console.log('got the list');
 
- },
- {
- urls  : ["*://douban.fm/j*playlist"],
- types : ["xmlhttprequest", "other"]
- }
+chrome.webRequest.chrome.webRequest.onCompleted.addListener(function (info) {
+		console.log('got the list');
 
- );.addListener(function (info) {
+	},
+	{
+		urls  : ["*://douban.fm/j*playlist"],
+		types : ["xmlhttprequest", "other",'json']
+	}
+
+);
+/*.addListener(function (info) {
  console.log('got the list');
 
  },
@@ -37,7 +37,6 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 
  );
  */
-
 
 chrome.webRequest.onBeforeRequest.addListener(function (info) {
 		return {cancel : true};

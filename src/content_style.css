@@ -49,3 +49,5 @@ display: inline;
 #music-pirate  a#moveleft, #music-pirate  a#moveright{
 width: 14px;
 }
+
+#sand-box{display: none;}
