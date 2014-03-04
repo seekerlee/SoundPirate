@@ -22,7 +22,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 	},
 // filters
 	{
-		urls  : ["http://*/*.flv*"],
+		urls  : ["http://douban.fm/*/rda/*.mp3"],
 		types : ["other", "object"]
 	},
 	["blocking"]
