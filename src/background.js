@@ -10,7 +10,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 	},
 // filters
 	{
-		urls  : ["http://douban.fm/j/", "http://*/*.mp3*", "https://*/*.mp3*", "http://*.file.xiami.com/h/*", //for xiami vip
+		urls  : ["http://douban.fm/j/", "http://*/*.mp3*", "https://*/*.mp3*", "https://*/*.mp4*", "http://*/*.mp4*", "http://*.file.xiami.com/h/*", //for xiami vip
 			"http://*.bcbits.com/download/track/*", //for bandcamp.com
 			"https://*.indievox.com/audio-streamer.php*"],
 		types : ["other", "object"]

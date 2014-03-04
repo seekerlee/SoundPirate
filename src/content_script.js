@@ -1,6 +1,6 @@
 ﻿//TODO: i18n!
 var thisUrl = document.URL;
-var filenamep = /(?=\w*\.mp3)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
+var filenamep = /(?=\w*\.mp3)|(?=\w*\.mp4)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
 var imgURL_MP3 = chrome.extension.getURL("images/music32.png");
 var imgURL_AAC = chrome.extension.getURL("images/aac32.png");
 var imgURL_M4A = chrome.extension.getURL("images/m4a32.png");
@@ -35,16 +35,7 @@ onMsg.addListener(
 					e.stopPropagation();
 				};
 				$('#dlink').mousedown(stopProp).keydown(stopProp).click(stopProp); //prevent parent event
-				var sand = document.getElementById('sand-box');
-				sand.addEventListener('loadedmetadata',function(){
-					var _duration = sand.duration;
-					console.log(_duration);
-					if(_duration<40){
-						console.log('Fuck the AD!');
-					}else{
-						console.log('Enjoy the music!');
-					}
-				},false);
+				
 			}
 			//console.log(request.obj);
 			//console.log(request.url);
