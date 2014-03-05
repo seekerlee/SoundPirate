@@ -69,16 +69,3 @@ chrome.webRequest.onBeforeRequest.addListener(
       "other", "object"
     ]
 });
-chrome.webRequest.onBeforeRequest.addListener(
-  function(info) {
-    chrome.tabs.sendMessage(info.tabId, {desc: "You got a new playlist!", url: info.url, type: 'xiami_play_list'});
-    console.log('info sent3');
-  },
-  {
-    urls: [
-      "http://www.xiami.com/song/playlist/*" //xiami playlist, to retrieve music info.
-    ],
-    types:[
-      "other", "object"
-    ]
-});

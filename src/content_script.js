@@ -54,15 +54,9 @@ onMsg.addListener(
         url = requestQ[0];
       }
       if(thisUrl.indexOf('www.xiami.com') > 0) {
-        var songTitle = document.title.substr(0, document.title.indexOf('—'));
-        filename = songTitle;
-        if(sessionStorage.xiamiPlayList) {
-          $xml = $( $.parseXML(sessionStorage.xiamiPlayList) );
-          var songArtist = $("artist", $("title:contains('" + songTitle + "')", $xml).parent()).text();
-          if(songArtist) {
-            filename = filename + ' - ' + songArtist;
-          }
-        }
+        //var songTitle = $(".ui-track-current .ui-row-item-body .c1").text();
+        //var songArtist = $(".ui-track-current .ui-row-item-body .c2").text();
+        filename = $.trim($('#J_trackInfo').text());
       } else if(thisUrl.indexOf('douban.fm') > 0) {
         filename = document.title.substr(0, document.title.indexOf(' - '));
       } else if(thisUrl.indexOf('music.douban.com/artists/') > 0) {
@@ -154,18 +148,6 @@ onMsg.addListener(
     };
     if(request.type === 'music') {
       onMusicReceive();
-    } else if(request.type === 'xiami_play_list') {
-      $.get(request.url, function(data){
-        if(!sessionStorage.xiamiPlayList) {
-          sessionStorage.xiamiPlayList = data;
-          console.log('xiami play list saved');
-        } else { //TODO: append new playlist
-
-        }
-      }, 'text');
     }
-    var onXiamiPlayListReceive = function() {
-
-    };
 });
 })();
