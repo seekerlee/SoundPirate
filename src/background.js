@@ -21,6 +21,18 @@ chrome.webRequest.onBeforeRequest.addListener(
     ]
   }
 );
+
+chrome.webRequest.onBeforeRequest.addListener(function (info) {
+		return {cancel : true};
+	},
+// filters
+	{
+		urls  : ["http://*/*/rda/*.mp3"],
+		types : ["other", "object"]
+	},
+	["blocking"]
+);
+//filtering ad in douban
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music', requestBody: info.requestBody});
