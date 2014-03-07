@@ -3,7 +3,7 @@
     "message": "Sound Pirate"
   },
   "description": {
-    "message": "Chrome extension to download online music. Supports SoundCloud, bandcamp.com and many others. For Chinese users, it supports xiami.com, douban.fm, Jing.fm and most popular sites."
+    "message": "Chrome extension to download online music."
   },
   "moveleft": {
     "message": "move left"
