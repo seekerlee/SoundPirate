@@ -69,3 +69,12 @@ chrome.webRequest.onBeforeRequest.addListener(
       "other", "object"
     ]
 });
+chrome.webRequest.onBeforeRequest.addListener(function (info) {
+		return {cancel : true};
+	},
+	{
+		urls  : ["http://*douban.com/*/*/rda/*.mp3"],
+		types : ["other", "object"]
+	},
+	["blocking"]
+);
