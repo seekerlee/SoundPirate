@@ -24,8 +24,8 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 	},
 // filters
 	{
-		urls  : ["http://*/*/rda/*.mp3"],
-		types : ["other", "object"]
+		urls  : ["http://mr*.douban.com/*/rda/*.mp3"],
+		types : ["other", "object"] 
 	},
 	["blocking"]
 );
