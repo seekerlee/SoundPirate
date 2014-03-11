@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-chrome.webRequest.onBeforeRequest.addListener(function (info) {
-		chrome.tabs.sendMessage(info.tabId, {
-			desc   : "You got a new song!",
-			url    : info.url,
-			obj    : info,
-			format : 'mp3',
-			type   : 'music'
-		});
 
-	},
-// filters
-	{
-		urls  : ["http://douban.fm/j/", "http://*/*.mp3*", "https://*/*.mp3*", 
-		"https://songza.com/*.mp4*", "http://songza.com/*.mp4*",//songza.com
-                "https://*.douban.com/*.mp4*", "http://*.douban.com/*.mp4*",
-		"http://*.file.xiami.com/h/*", //for xiami vip
-			"http://*.bcbits.com/download/track/*", //for bandcamp.com
-			"https://*.indievox.com/audio-streamer.php*"],
-		types : ["other", "object"]
-	});
-
-=======
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music'});
@@ -38,6 +16,8 @@ chrome.webRequest.onBeforeRequest.addListener(
       "https://*.indievox.com/audio-streamer.php*",
 	  "https://songza.com/*.mp4*",
 	  "http://songza.com/*.mp4*"//songza.com
+                "https://*.douban.com/*.mp4", 
+                "http://*.douban.com/*.mp4"
     ],
     types:[
       "other", "object"
