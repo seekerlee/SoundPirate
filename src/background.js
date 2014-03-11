@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5813239cc067b2d5e47a6a4ba157c73fa4e7c11a
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music'});
@@ -14,9 +18,15 @@ chrome.webRequest.onBeforeRequest.addListener(
       "http://*.bcbits.com/download/track/*", //for bandcamp.com
       "https://*.indievox.com/audio-streamer.php*",
 	  "https://songza.com/*.mp4*",
+<<<<<<< HEAD
 	  "http://songza.com/*.mp4*",//songza.com
            "https://*.douban.com/*.mp4*",
 	  "http://*.douban.com/*.mp4*"
+=======
+	  "http://songza.com/*.mp4*"//songza.com
+                "https://*.douban.com/*.mp4", 
+                "http://*.douban.com/*.mp4"
+>>>>>>> 5813239cc067b2d5e47a6a4ba157c73fa4e7c11a
     ],
     types:[
       "other", "object"
