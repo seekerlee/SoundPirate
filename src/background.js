@@ -13,6 +13,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 	{
 		urls  : ["http://douban.fm/j/", "http://*/*.mp3*", "https://*/*.mp3*", 
 		"https://songza.com/*.mp4*", "http://songza.com/*.mp4*",//songza.com
+                "https://*.douban.com/*.mp4*", "http://*.douban.com/*.mp4*",
 		"http://*.file.xiami.com/h/*", //for xiami vip
 			"http://*.bcbits.com/download/track/*", //for bandcamp.com
 			"https://*.indievox.com/audio-streamer.php*"],
@@ -94,7 +95,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 	types : ["other", "object"]
 });
 =======
-		urls  : ["http://*/*/rda/*.mp3"],
+		urls  : ["http://*.douban.com/*/rda/*.mp3"],
 		types : ["other", "object"]
 	},
 	["blocking"]
