@@ -13,6 +13,8 @@ chrome.webRequest.onBeforeRequest.addListener(
       "http://*.file.xiami.com/h/*", //for xiami vip
       "http://*.bcbits.com/download/track/*", //for bandcamp.com
       "https://*.indievox.com/audio-streamer.php*",
+       "https://*.douban.com/*.mp4*",
+	  "http://*.douban.com/*.mp4*",
 	  "https://songza.com/*.mp4*",
 	  "http://songza.com/*.mp4*"//songza.com
     ],
