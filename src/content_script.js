@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-﻿(function() {
-=======
 //TODO: i18n!
 (function() {
->>>>>>> 50685e78d620ebf39c0676bcfde63cabceab20a8
 var thisUrl = document.URL;
 if(  thisUrl.indexOf('mail.google.com') >= 0
    ||thisUrl.indexOf('plus.google.com') >= 0)
@@ -126,7 +122,7 @@ onMsg.addListener(
         filename = $('#now-playing-metadata .song').text() + ' - ' + $('#now-playing-metadata .artist').text();
         url = url + '?streamKey=' + request.requestBody.formData['streamKey'];
       }
-
+	  
       if(!filename) {
         filename = filenamep.exec(url);
       } else {
@@ -154,8 +150,4 @@ onMsg.addListener(
       onMusicReceive();
     }
 });
-<<<<<<< HEAD
 })();
-=======
-})();
->>>>>>> 50685e78d620ebf39c0676bcfde63cabceab20a8
