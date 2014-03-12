@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 5813239cc067b2d5e47a6a4ba157c73fa4e7c11a
+=======
+>>>>>>> 50685e78d620ebf39c0676bcfde63cabceab20a8
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
     chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music'});
@@ -33,16 +36,70 @@ chrome.webRequest.onBeforeRequest.addListener(
     ]
   }
 );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 50685e78d620ebf39c0676bcfde63cabceab20a8
 
 chrome.webRequest.onBeforeRequest.addListener(function (info) {
 		return {cancel : true};
 	},
 // filters
 	{
+<<<<<<< HEAD
 		urls  : ["http://*/*/rda/*.mp3"],
 		types : ["other", "object"]
 	},
 	["blocking"]
+=======
+
+		urls  : [
+			"http://mr*.douban.com/*/rda/*.mp3",
+			"http://douban.fm/j/*.mp3"
+			],
+		types : ["other", "object"] 
+	},
+	["blocking"]
+);
+
+chrome.webRequest.onBeforeRequest.addListener(function (info) {
+	chrome.tabs.sendMessage(info.tabId, {
+		desc   : "You got a new song!",
+		url    : info.url,
+		format : 'aac',
+		type   : 'music'
+	});
+	console.log('info sent');
+}, {
+	urls  : ["http://*/*.aac*", "https://*/*.aac*"],
+	types : ["other", "object"]
+});
+chrome.webRequest.onBeforeRequest.addListener(function (info) {
+	chrome.tabs.sendMessage(info.tabId, {
+		desc   : "You got a new song!",
+		url    : info.url,
+		format : 'm4a',
+		type   : 'music'
+	});
+	console.log('info sent');
+}, {
+	urls  : ["http://*/*.m4a*", "https://*/*.m4a*"],
+	types : ["other", "object"]
+});
+chrome.webRequest.onBeforeRequest.addListener(function (info) {
+	chrome.tabs.sendMessage(info.tabId, {
+		desc : "You got a new playlist!",
+		url  : info.url,
+		type : 'xiami_play_list'
+	});
+	console.log('info sent');
+}, {
+	urls  : ["http://www.xiami.com/song/playlist/*" //xiami playlist, to retrieve music info.
+	],
+	types : ["other", "object"]
+});
+
+>>>>>>> 50685e78d620ebf39c0676bcfde63cabceab20a8
 );
 //filtering ad in douban
 chrome.webRequest.onBeforeRequest.addListener(
@@ -62,6 +119,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     ]
   },
   ['requestBody']
+<<<<<<< HEAD
 );
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
@@ -93,3 +151,6 @@ chrome.webRequest.onBeforeRequest.addListener(
       "other", "object"
     ]
 });
+=======
+  );
+>>>>>>> 50685e78d620ebf39c0676bcfde63cabceab20a8
