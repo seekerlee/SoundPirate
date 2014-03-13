@@ -13,10 +13,30 @@ chrome.webRequest.onBeforeRequest.addListener(
       "http://*.file.xiami.com/h/*", //for xiami vip
       "http://*.bcbits.com/download/track/*", //for bandcamp.com
       "https://*.indievox.com/audio-streamer.php*",
-	  "https://songza.com/*.mp4*",
-	  "http://songza.com/*.mp4*",//songza.com
-          "https://mr*.douban.com/*/view/song/*.mp4",
-          "http://mr*.douban.com/*/view/song/*.mp4"
+      "https://songza.com/*.mp4*",
+      "http://songza.com/*.mp4*",//songza.com
+      "https://mr*.douban.com/*/view/song/*.mp4",
+      "http://mr*.douban.com/*/view/song/*.mp4"
+    ],
+    types:[
+      "other", "object"
+    ]
+  }
+);
+chrome.webRequest.onBeforeRequest.addListener(
+  function(info) {
+    chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp4', type: 'music'});
+    console.log('info sent0');
+    console.log(info.requestBody);
+    console.log(info );
+  },
+  // filters
+  {
+    urls: [
+      "https://songza.com/*.mp4*",
+      "http://songza.com/*.mp4*",//songza.com
+      "https://mr*.douban.com/*/view/song/*.mp4",
+      "http://mr*.douban.com/*/view/song/*.mp4"
     ],
     types:[
       "other", "object"
