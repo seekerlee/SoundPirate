@@ -30,9 +30,9 @@ chrome.webRequest.onBeforeRequest.addListener(
   {
     urls: [
       "https://songza.com/*.mp4*",
-      "http://songza.com/*.mp4*",//songza.com
-      "https://mr*.douban.com/*/view/song/*.mp4",
-      "http://mr*.douban.com/*/view/song/*.mp4"
+      "http://songza.com/*.mp4*",
+      "https://*.douban.com/*.mp4",
+      "http://*.douban.com/*.mp4"
     ],
     types:[
       "other", "object"
