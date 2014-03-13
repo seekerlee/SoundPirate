@@ -14,7 +14,9 @@ chrome.webRequest.onBeforeRequest.addListener(
       "http://*.bcbits.com/download/track/*", //for bandcamp.com
       "https://*.indievox.com/audio-streamer.php*",
 	  "https://songza.com/*.mp4*",
-	  "http://songza.com/*.mp4*"//songza.com
+	  "http://songza.com/*.mp4*",//songza.com
+          "https://mr*.douban.com/*/view/song/*.mp4",
+          "http://mr*.douban.com/*/view/song/*.mp4"
     ],
     types:[
       "other", "object"

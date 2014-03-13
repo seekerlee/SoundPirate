@@ -1,4 +1,4 @@
-﻿//TODO: i18n!
+//TODO: i18n!
 (function() {
 var thisUrl = document.URL;
 if(  thisUrl.indexOf('mail.google.com') >= 0
