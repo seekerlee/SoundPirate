@@ -29,8 +29,10 @@ Sound-Pirate Chrome Extension
 3. Go to online music website and enjoy the music.
 4. Once you see the small icon show up on left bottom conner, that means Sound Pirate is ready to crab that music!
 
-Welcome to report any comments or feedback to 
+### Wanna put any comments or feedback?
 Seeker Lee [@Github](https://github.com/seekerlee), [@Facebook](https://www.facebook.com/lee.seeker.3) or
 Pan[@Github] (https://github.com/spiderPan), [@Facebook](https://www.facebook.com/banglanfeng.pan)
 
-		
+### Note
+The following websites have been tested to support 
+[Sound Cloud](https://soundcloud.com/), [Songza](http://songza.com/),[Douban FM](http://douban.fm/)，[Douban Artists](http://music.douban.com/artists/)，[Xiami](http://www.xiami.com/)，[Jing.fm](http://jing.fm/)， [Songtaste](http://www.songtaste.com/)，[luoo](http://www.luoo.net/)，[Renren FM](http://fm.renren.com/)，[QQ music](http://y.qq.com/)，[163 music](http://music.163.com/)，[Sina Music](http://music.sina.com.cn/)，[Sougo Music](http://mp3.sogou.com/)，[QQ FM](http://fm.qq.com)，[Kuwo](http://kuwo.cn)，[5SING](http://5sing.com/)，[Grooveshark](http://grooveshark.com)
