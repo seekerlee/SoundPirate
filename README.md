@@ -22,7 +22,7 @@
 Sound-Pirate Chrome Extension
 ============
 
-### "Grabbing Your Favourite Sound Like a Pirate!" ###
+### "Grabbing Your Favourite Sound Like a Pirate!"
 
 1. Checkout your Chrome version is 24+
 2. Download and install the extension, either through [Chrome WebStore](https://chrome.google.com/webstore/detail/声海盗/idleenniidjlnmnjkjmmnocnkmjibadd)( for Stable Version ) , or [Github](https://github.com/spiderPan/Sound-Pirate) ( for Dev version)
@@ -30,6 +30,7 @@ Sound-Pirate Chrome Extension
 4. Once you see the small icon show up on left bottom conner, that means Sound Pirate is ready to crab that music!
 
 Welcome to report any comments or feedback to 
-Seeker Lee [@Github](https://github.com/seekerlee), [@facebook](https://www.facebook.com/lee.seeker.3) or Pan[@Github] (https://github.com/spiderPan), [@facebook](https://www.facebook.com/banglanfeng.pan)
+Seeker Lee [@Github](https://github.com/seekerlee), [@facebook](https://www.facebook.com/lee.seeker.3) or
+Pan[@Github] (https://github.com/spiderPan), [@facebook](https://www.facebook.com/banglanfeng.pan)
 
 		
