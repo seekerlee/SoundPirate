@@ -1,4 +1,4 @@
-声海盗 Sound-Pirate
+声海盗
 ============
 
 ### 声海盗-下载在线音乐的Chrome插件
@@ -18,3 +18,18 @@
 豆瓣FM <=64kbps, 豆瓣音乐人 >=160kbps, 虾米 128kbps, songtaste 128kbps, 落网 128kbps, 人人电台 96kbps, QQ音乐 128kbps, 网易云音乐 160kbps, 新浪乐库 128kbps, 搜狗音乐 128kbps.
 
 报告bug，提建议，吐槽: 微博[@德先生在哪-simon-李实](http://weibo.com/u/1724095115).
+
+Sound-Pirate Chrome Extension
+============
+
+### "Grabbing Your Favourite Sound Like a Pirate!" ###
+
+1. Checkout your Chrome version is 24+
+2. Download and install the extension, either through [Chrome WebStore](https://chrome.google.com/webstore/detail/声海盗/idleenniidjlnmnjkjmmnocnkmjibadd)( for Stable Version ) , or [Github](https://github.com/spiderPan/Sound-Pirate) ( for Dev version)
+3. Go to online music website and enjoy the music.
+4. Once you see the small icon show up on left bottom conner, that means Sound Pirate is ready to crab that music!
+
+Welcome to report any comments or feedback to 
+Seeker Lee [@Github](https://github.com/seekerlee), [@facebook](https://www.facebook.com/lee.seeker.3) or Pan[@Github] (https://github.com/spiderPan), [@facebook](https://www.facebook.com/banglanfeng.pan)
+
+		
