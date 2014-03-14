@@ -30,7 +30,7 @@ Sound-Pirate Chrome Extension
 4. Once you see the small icon show up on left bottom conner, that means Sound Pirate is ready to crab that music!
 
 Welcome to report any comments or feedback to 
-Seeker Lee [@Github](https://github.com/seekerlee), [@facebook](https://www.facebook.com/lee.seeker.3) or
-Pan[@Github] (https://github.com/spiderPan), [@facebook](https://www.facebook.com/banglanfeng.pan)
+Seeker Lee [@Github](https://github.com/seekerlee), [@Facebook](https://www.facebook.com/lee.seeker.3) or
+Pan[@Github] (https://github.com/spiderPan), [@Facebook](https://www.facebook.com/banglanfeng.pan)
 
 		
