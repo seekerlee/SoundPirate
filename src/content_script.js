@@ -58,7 +58,12 @@ onMsg.addListener(
         //var songArtist = $(".ui-track-current .ui-row-item-body .c2").text();
         filename = $.trim($('#J_trackInfo').text());
       } else if(thisUrl.indexOf('douban.fm') > 0) {
-        filename = document.title.substr(0, document.title.indexOf(' - '));
+        var songInfo = JSON.parse(localStorage.bubbler_song_info);
+        if(songInfo !== undefined)
+            filename = songInfo.song_name + ' - ' + songInfo.artist;
+        else
+            filename = document.title.substr(0, document.title.indexOf(' - '));
+            
       } else if(thisUrl.indexOf('music.douban.com/artists/') > 0) {
         filename = $('.item-stat-play').attr('data-songname') + ' - ' + $('.artist-name a', $('.item-stat-play').parent().parent()).text();
       } else if(thisUrl.indexOf('www.songtaste.com/song') > 0) {
