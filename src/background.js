@@ -91,7 +91,7 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 		return {cancel : true};
 	},
 	{
-		urls: [
+		urls  : [
 		  "http://*.douban.com/*/rda/*.mp3",
 		  "http://*.douban.fm/j/except_report?*"
 		],
