@@ -10,6 +10,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     urls: [
       "http://*/*.mp3*",
       "https://*/*.mp3*",
+	  "http://*.thesixtyone.com/thesixtyone_production/audio/*",
       "http://*.file.xiami.com/h/*", //for xiami vip
       "http://*.bcbits.com/download/track/*", //for bandcamp.com
       "https://*.indievox.com/audio-streamer.php*",
