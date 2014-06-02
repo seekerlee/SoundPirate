@@ -10,6 +10,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     urls: [
       "http://*/*.mp3*",
       "https://*/*.mp3*",
+	  "http://*.thesixtyone.com/thesixtyone_production/audio/*",
       "http://*.file.xiami.com/h/*", //for xiami vip
       "http://*.bcbits.com/download/track/*", //for bandcamp.com
       "https://*.indievox.com/audio-streamer.php*",
@@ -31,8 +32,8 @@ chrome.webRequest.onBeforeRequest.addListener(
     urls: [
       "https://songza.com/*.mp4*",
       "http://songza.com/*.mp4*",
-      "*://*.douban.com/*/view/song/*/*.mp4"
-      
+      "https://*.douban.com/*.mp4",
+      "http://*.douban.com/*.mp4"
     ],
     types:[
       "other", "object"
@@ -91,7 +92,10 @@ chrome.webRequest.onBeforeRequest.addListener(function (info) {
 		return {cancel : true};
 	},
 	{
-		urls  : ["http://*.douban.com/*/rda/*.mp3","http://*.douban.fm/j/except_report?*"],
+		urls  : [
+		  "http://*.douban.com/*/rda/*.mp3",
+		  "http://*.douban.fm/j/except_report?*"
+		],
 		types : ["other", "object"]
 	},
 	["blocking"]

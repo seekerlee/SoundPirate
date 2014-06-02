@@ -3,7 +3,7 @@ var thisUrl = document.URL;
 if(  thisUrl.indexOf('mail.google.com') >= 0
    ||thisUrl.indexOf('plus.google.com') >= 0)
   return;
-var filenamep = /(?=\w*\.mp3)|(?=\w*\.mp4)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
+var filenamep = /(?=\w*\.mp3)|(?=\w*\.mp4)|(?=\w*\.m4a)|(?=\w*\.aac)|(?=\w*\_stream)/i;
 var imgURL_MP3 = chrome.extension.getURL("images/music32.png");
 var imgURL_AAC = chrome.extension.getURL("images/aac32.png");
 var imgURL_M4A = chrome.extension.getURL("images/m4a32.png");
@@ -20,7 +20,7 @@ onMsg.addListener(
       // frames
       //if($('body').size() == 0)
       if(!document.getElementById(divId)) {
-        $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="' + chrome.i18n.getMessage("moveleft") + '"><img src="' + imgURLLeftA + '"/></a><a id="dlink"><img src="' + imgURL_MP3 + '"/></a><a id="moveright" title="' + chrome.i18n.getMessage("moveright") + '"><img src="' + imgURLRightA + '"/></a></div>');
+        $('body').append('<div id="' + divId + '" class="' + localStorage.piratePosition + '"><a id="moveleft" title="' + chrome.i18n.getMessage("moveleft") + '"><img src="' + imgURLLeftA + '"/></a><a id="dlink" download><img src="' + imgURL_MP3 + '"/></a><a id="moveright" title="' + chrome.i18n.getMessage("moveright") + '"><img src="' + imgURLRightA + '"/></a></div>');
         $("#moveright").click(function(){
           $(this).css("display", "none");
           $("#music-pirate").animate({left: document.body.clientWidth - 32}, 500, 'swing', function(){
@@ -58,7 +58,12 @@ onMsg.addListener(
         //var songArtist = $(".ui-track-current .ui-row-item-body .c2").text();
         filename = $.trim($('#J_trackInfo').text());
       } else if(thisUrl.indexOf('douban.fm') > 0) {
-        filename = document.title.substr(0, document.title.indexOf(' - '));
+        var songInfo = JSON.parse(localStorage.bubbler_song_info);
+        if(songInfo !== undefined)
+            filename = songInfo.song_name + ' - ' + songInfo.artist;
+        else
+            filename = document.title.substr(0, document.title.indexOf(' - '));
+            
       } else if(thisUrl.indexOf('music.douban.com/artists/') > 0) {
         filename = $('.item-stat-play').attr('data-songname') + ' - ' + $('.artist-name a', $('.item-stat-play').parent().parent()).text();
       } else if(thisUrl.indexOf('www.songtaste.com/song') > 0) {
