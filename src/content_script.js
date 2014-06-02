@@ -3,7 +3,7 @@ var thisUrl = document.URL;
 if(  thisUrl.indexOf('mail.google.com') >= 0
    ||thisUrl.indexOf('plus.google.com') >= 0)
   return;
-var filenamep = /(?=\w*\.mp3)|(?=\w*\.mp4)|(?=\w*\.m4a)|(?=\w*\.aac)|(?=\w*\_stream)/i;
+var filenamep = /(?=\w*\.mp3)|(?=\w*\.mp4)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
 var imgURL_MP3 = chrome.extension.getURL("images/music32.png");
 var imgURL_AAC = chrome.extension.getURL("images/aac32.png");
 var imgURL_M4A = chrome.extension.getURL("images/m4a32.png");
@@ -124,8 +124,20 @@ onMsg.addListener(
 	      filename = $('.sup span a').text();
 	    }
       } else if(thisUrl.indexOf('grooveshark.com') > 0) {
-        filename = $('#now-playing-metadata .song').text() + ' - ' + $('#now-playing-metadata .artist').text();
-        url = url + '?streamKey=' + request.requestBody.formData['streamKey'];
+          filename = $('#now-playing-metadata .song').text() + ' - ' + $('#now-playing-metadata .artist').text();
+          url = url + '?streamKey=' + request.requestBody.formData['streamKey'];
+      } else if(thisUrl.indexOf('thesixtyone.com') > 0) {
+          filename = $('#song_panel_title').text() + ' - ' + $('#song_panel_artist').text();
+      } else if(thisUrl.indexOf('luoo.net') > 0) {
+          if(thisUrl.indexOf('discover') > 0) {
+            filename = $('#lnTrackName').text();
+          } else if(thisUrl.indexOf('essay') > 0) {
+              filename = $('#luooPlayerPlaylist .track-name').text();
+          } else if(thisUrl.indexOf('single') > 0) {
+              filename = $('.jp-playlist-current .jp-playlist-current').text();
+          } else if(thisUrl.indexOf('music') > 0) {
+            filename = $('.luoo-player .track-name').text() + ' - ' + $('.luoo-player .artist').text();
+          }
       }
 	  
       if(!filename) {
