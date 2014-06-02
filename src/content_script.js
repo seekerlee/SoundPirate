@@ -132,9 +132,9 @@ onMsg.addListener(
           if(thisUrl.indexOf('discover') > 0) {
             filename = $('#lnTrackName').text();
           } else if(thisUrl.indexOf('essay') > 0) {
-              filename = $('#luooPlayerPlaylist .track-name').text();
+            filename = $('#luooPlayerPlaylist .track-name').text();
           } else if(thisUrl.indexOf('single') > 0) {
-              filename = $('.jp-playlist-current .jp-playlist-current').text();
+            filename = $('.jp-playlist-current .jp-playlist-current').text();
           } else if(thisUrl.indexOf('music') > 0) {
             filename = $('.luoo-player .track-name').text() + ' - ' + $('.luoo-player .artist').text();
           }
@@ -143,7 +143,7 @@ onMsg.addListener(
       if(!filename) {
         filename = filenamep.exec(url);
       } else {
-        filename = filename + '.' + request.format;
+        filename = $.trim(filename) + '.' + request.format;
       }
       $('#dlink').attr('download', filename).attr('title', filename).attr('href', url);
       (function(deg){
