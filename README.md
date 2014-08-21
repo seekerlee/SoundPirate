@@ -14,7 +14,7 @@ Pan[@Github] (https://github.com/spiderPan), [@Facebook](https://www.facebook.co
 
 ### Note
 The following websites have been tested to support 
-[Sound Cloud](https://soundcloud.com/), [Songza](http://songza.com/), [Douban FM](http://douban.fm/)，[Douban Artists](http://music.douban.com/artists/)，[Xiami](http://www.xiami.com/)，[Jing.fm](http://jing.fm/)， [Songtaste](http://www.songtaste.com/)，[luoo](http://www.luoo.net/)，[Renren FM](http://fm.renren.com/)，[QQ music](http://y.qq.com/)，[163 music](http://music.163.com/)，[Sina Music](http://music.sina.com.cn/)，[Sougo Music](http://mp3.sogou.com/)，[QQ FM](http://fm.qq.com)，[Kuwo](http://kuwo.cn)，[5SING](http://5sing.com/)，[Grooveshark](http://grooveshark.com)
+[Sound Cloud](https://soundcloud.com/), [Douban FM](http://douban.fm/)，[Douban Artists](http://music.douban.com/artists/)，[Xiami](http://www.xiami.com/)，[Jing.fm](http://jing.fm/)， [Songtaste](http://www.songtaste.com/)，[luoo](http://www.luoo.net/)，[Renren FM](http://fm.renren.com/)，[QQ music](http://y.qq.com/)，[163 music](http://music.163.com/)，[Sina Music](http://music.sina.com.cn/)，[Sougo Music](http://mp3.sogou.com/)，[QQ FM](http://fm.qq.com)，[Kuwo](http://kuwo.cn)，[5SING](http://5sing.com/)，[Grooveshark](http://grooveshark.com)
 
 
 声海盗
