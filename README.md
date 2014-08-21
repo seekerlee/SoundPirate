@@ -6,7 +6,7 @@ Sound-Pirate Chrome Extension
 1. Checkout your Chrome version is 24+
 2. Download and install the extension, either through [Chrome WebStore](https://chrome.google.com/webstore/detail/声海盗/idleenniidjlnmnjkjmmnocnkmjibadd)( for Stable Version ) , or [Github](https://github.com/spiderPan/Sound-Pirate) ( for Dev version)
 3. Go to online music website and enjoy the music.
-4. Once you see the small icon show up on left bottom conner, that means Sound Pirate is ready to crab that music!
+4. Once you see the small icon show up on left bottom conner, that means Sound Pirate is ready to grab that music!
 
 ### Wanna put any comments or feedback?
 Seeker Lee [@Github](https://github.com/seekerlee), [@Facebook](https://www.facebook.com/lee.seeker.3) or
