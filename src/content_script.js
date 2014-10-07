@@ -145,7 +145,29 @@ onMsg.addListener(
       } else {
         filename = $.trim(filename) + '.' + request.format;
       }
+      
+      // remain the old download code for failback
       $('#dlink').attr('download', filename).attr('title', filename).attr('href', url);
+	  
+      // chrome doesn't support download attribute for cross-site request, 
+      // so use the code below to work around
+      if (url !== window.currentMusicUrl) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'blob';
+
+        xhr.onload = function(e) {
+          var res = xhr.response;
+          var blob = new Blob([res], {type:"audio/mpeg"});
+
+          window.URL.revokeObjectURL(window.downloadUrl);
+          window.currentMusicUrl = url;
+          window.downloadUrl = window.URL.createObjectURL(blob);
+          document.getElementById('dlink').href = downloadUrl;
+        };
+        xhr.send();
+      }
+	  
       (function(deg){
         var degnow = 0;
         var ro = function(){
