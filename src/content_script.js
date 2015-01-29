@@ -11,7 +11,7 @@ var imgURL_MP4 = chrome.extension.getURL("images/mp432.png");
 var imgURLLeftA = chrome.extension.getURL("images/arrowl32.png");
 var imgURLRightA = chrome.extension.getURL("images/arrowr32.png");
 var divId = "music-pirate";
-if(!localStorage.piratePosition) localStorage.piratePosition = 'priate-left'
+if(!localStorage.piratePosition) localStorage.piratePosition = 'priate-left';
 var onMsg = chrome.runtime.onMessage || chrome.extension.onMessage || chrome.extension.onRequest;
 var requestQ = [];
 onMsg.addListener(
