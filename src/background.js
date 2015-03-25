@@ -89,6 +89,22 @@ chrome.webRequest.onBeforeRequest.addListener(
       "other", "object"
     ]
 });
+chrome.webRequest.onBeforeRequest.addListener(
+  function(info) {
+    chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'wma', type: 'music'});
+    console.log('info sent3');
+    console.log(info.frameId);
+    console.log(info.parentFrameId );
+  },
+  {
+    urls: [
+      "http://*/*.wma*",
+      "https://*/*.wma*"
+    ],
+    types:[
+      "other", "object"
+    ]
+});
 chrome.webRequest.onBeforeRequest.addListener(function (info) {
 		return {cancel : true};
 	},

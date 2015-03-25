@@ -3,11 +3,12 @@ var thisUrl = document.URL;
 if(  thisUrl.indexOf('mail.google.com') >= 0
    ||thisUrl.indexOf('plus.google.com') >= 0)
   return;
-var filenamep = /(?=\w*\.mp3)|(?=\w*\.mp4)|(?=\w*\.m4a)|(?=\w*\.aac)/i;
+var filenamep = /(?=\w*\.mp3)|(?=\w*\.mp4)|(?=\w*\.m4a)|(?=\w*\.aac)|(?=\w*\.wma)/i;
 var imgURL_MP3 = chrome.extension.getURL("images/music32.png");
 var imgURL_AAC = chrome.extension.getURL("images/aac32.png");
 var imgURL_M4A = chrome.extension.getURL("images/m4a32.png");
 var imgURL_MP4 = chrome.extension.getURL("images/mp432.png");
+var imgURL_WMA = chrome.extension.getURL("images/wma32.png");
 var imgURLLeftA = chrome.extension.getURL("images/arrowl32.png");
 var imgURLRightA = chrome.extension.getURL("images/arrowr32.png");
 var divId = "music-pirate";
@@ -138,8 +139,28 @@ onMsg.addListener(
           } else if(thisUrl.indexOf('music') > 0) {
             filename = $('.luoo-player .track-name').text() + ' - ' + $('.luoo-player .artist').text();
           }
-      }
-	  
+      } else if(thisUrl.indexOf('1ting.com') > 0) {
+		  var idx = document.title.indexOf('免费在线试听');
+		  if(idx != -1) {
+	        // 第一次收听例外, 默认即为"曲名_歌手名"的命名方式
+		    filename = $.trim(document.title.substr(0, idx));
+		  }
+		  else {
+		    //为防止英文歌曲有多个空格，先确定歌手名字
+		    var idx_begin = document.title.indexOf('歌词下载_') + 5;
+		    var length = document.title.indexOf('专辑') - idx_begin;
+		    var artist_name = $.trim(document.title.substr(idx_begin, length));
+		    console.log('artist ' + artist_name); 
+
+		    idx_begin = document.title.indexOf(artist_name) + artist_name.length;
+		    length = document.title.indexOf('在线试听') - idx_begin;
+		    var song_name = $.trim(document.title.substr(idx_begin, length));; 
+		    console.log('song ' + song_name); 
+
+		    filename = song_name + ' - ' + artist_name ;
+		  }
+	  }
+	 
       if(!filename) {
         filename = filenamep.exec(url);
       } else {
@@ -185,6 +206,8 @@ onMsg.addListener(
         $("#music-pirate #dlink img")[0].src = imgURL_M4A;
       } else if(request.format === 'mp4') {
         $("#music-pirate #dlink img")[0].src = imgURL_MP4;
+      } else if(request.format === 'wma') {
+        $("#music-pirate #dlink img")[0].src = imgURL_WMA;
       }
     };
     if(request.type === 'music') {
