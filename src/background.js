@@ -10,7 +10,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     urls: [
       "http://*/*.mp3*",
       "https://*/*.mp3*",
-	  "http://*.thesixtyone.com/thesixtyone_production/audio/*",
+      "http://*.thesixtyone.com/thesixtyone_production/audio/*",
       "http://*.file.xiami.com/h/*", //for xiami vip
       "http://*.bcbits.com/download/track/*", //for bandcamp.com
       "https://*.indievox.com/audio-streamer.php*",
@@ -32,6 +32,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     urls: [
       "https://songza.com/*.mp4*",
       "http://songza.com/*.mp4*",
+      "http://mn-ecn-prd-http.mndigital.com/*.mp4",
       "http://fp-limelight.musicnet.com/mp3/*.mp4*",
       "https://*.douban.com/*.mp4",
       "http://*.douban.com/*.mp4"
