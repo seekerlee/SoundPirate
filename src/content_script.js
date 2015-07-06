@@ -91,6 +91,8 @@ onMsg.addListener(
         filename = document.title.substr(0, document.title.indexOf(' - 百度音乐盒'));
       } else if(thisUrl.indexOf('y.qq.com') > 0) {
         filename = $('#divplayer p.music_name').text() + ' - ' + $('#divplayer .music_info_main .singer_name').text();
+      } else if(thisUrl.indexOf('music.163.com/demo/fm') > 0) { // 网易云音乐电台内测DEMO
+        filename = $('.f-fs1').text() + ' - ' + $('a.s-fc3').text();
       } else if(thisUrl.indexOf('music.163.com') > 0) {
         filename = $('.play .words .fc1').text() + ' - ' + $('.play .words .by').text();
       } else if(thisUrl.indexOf('ting.sina.com.cn') > 0) {
