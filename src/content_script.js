@@ -179,6 +179,7 @@ onMsg.addListener(
         };
         ro();
       })(12);
+
       if(request.format === 'aac') {
         $("#music-pirate #dlink img")[0].src = imgURL_AAC;
       } else if(request.format === 'm4a') {
@@ -187,6 +188,7 @@ onMsg.addListener(
         $("#music-pirate #dlink img")[0].src = imgURL_MP4;
       }
     };
+
     if(request.type === 'music') {
       onMusicReceive();
     }
