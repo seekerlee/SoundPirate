@@ -36,7 +36,8 @@ chrome.webRequest.onBeforeRequest.addListener(
       "http://mn-ecn-prd-http.mndigital.com/*.mp4",
       "http://fp-limelight.musicnet.com/mp3/*.mp4*",
       "https://*.douban.com/*.mp4",
-      "http://*.douban.com/*.mp4"
+      "http://*.douban.com/*.mp4",
+      "http://*.doubanio.com/*.mp4",
     ]
   }
 );
