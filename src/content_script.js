@@ -58,12 +58,19 @@ onMsg.addListener(
         //var songArtist = $(".ui-track-current .ui-row-item-body .c2").text();
         filename = $.trim($('#J_trackInfo').text());
       } else if(thisUrl.indexOf('douban.fm') > 0) {
-        var songInfo = JSON.parse(localStorage.bubbler_song_info);
-        if(songInfo !== undefined)
+        if ($(".fullplayer").length) { // 新版
+          var songInfo = JSON.parse(localStorage.simpleStorage);
+          if(songInfo !== undefined)
+            var current_song = songInfo["douradio-player-state"].current_song;
+            filename = current_song.title + ' - ' + current_song.artist;
+        } else { //旧版
+          var songInfo = JSON.parse(localStorage.bubbler_song_info);
+          if(songInfo !== undefined)
             filename = songInfo.song_name + ' - ' + songInfo.artist;
-        else
-            filename = document.title.substr(0, document.title.indexOf(' - '));
-            
+        }
+        if (filename === undefined) {
+          filename = document.title.substr(0, document.title.indexOf(' - '));
+        }
       } else if(thisUrl.indexOf('music.douban.com/artists/') > 0) {
         filename = $('.item-stat-play').attr('data-songname') + ' - ' + $('.artist-name a', $('.item-stat-play').parent().parent()).text();
       } else if(thisUrl.indexOf('www.songtaste.com/song') > 0) {
@@ -110,19 +117,19 @@ onMsg.addListener(
       } else if(thisUrl.indexOf('music.so.com') > 0) {
         filename = document.title.substr(0, document.title.indexOf(' - 360音乐盒'));
       } else if(thisUrl.indexOf('5sing.com') > 0) {
-	    if(thisUrl.indexOf('fc.5sing.com') > 0) {
-	      // 5sing 翻唱
-	      filename = $('.mc_info h1').text() + ' - ' + $('.blue strong').text();
-	    } else if(thisUrl.indexOf('yc.5sing.com') > 0) {
-	      // 5sing  原创
-	      filename = $('.mc_info h1').text() + ' - ' + $('.blue strong').text();
-	    } else if(thisUrl.indexOf('bz.5sing.com') > 0) {
-	      // 5sing 伴奏
-	      filename = $('.play_intro_tit h1').text();
-	    } else if(thisUrl.indexOf('fm.5sing.com') > 0) {
-	      // 5sing 电台
-	      filename = $('.sup span a').text();
-	    }
+        if(thisUrl.indexOf('fc.5sing.com') > 0) {
+          // 5sing 翻唱
+          filename = $('.mc_info h1').text() + ' - ' + $('.blue strong').text();
+        } else if(thisUrl.indexOf('yc.5sing.com') > 0) {
+          // 5sing  原创
+          filename = $('.mc_info h1').text() + ' - ' + $('.blue strong').text();
+        } else if(thisUrl.indexOf('bz.5sing.com') > 0) {
+          // 5sing 伴奏
+          filename = $('.play_intro_tit h1').text();
+        } else if(thisUrl.indexOf('fm.5sing.com') > 0) {
+          // 5sing 电台
+          filename = $('.sup span a').text();
+        }
       } else if(thisUrl.indexOf('grooveshark.com') > 0) {
           filename = $('#now-playing-metadata .song').text() + ' - ' + $('#now-playing-metadata .artist').text();
           url = url + '?streamKey=' + request.requestBody.formData['streamKey'];
@@ -139,7 +146,7 @@ onMsg.addListener(
             filename = $('.luoo-player .track-name').text() + ' - ' + $('.luoo-player .artist').text();
           }
       }
-	  
+      
       if(!filename) {
         filename = filenamep.exec(url);
       } else {
@@ -148,7 +155,7 @@ onMsg.addListener(
       
       // remain the old download code for failback
       $('#dlink').attr('download', filename).attr('title', filename).attr('href', url);
-	  
+      
       // chrome doesn't support download attribute for cross-site request, 
       // so use the code below to work around
       if (url !== window.currentMusicUrl) {
@@ -167,7 +174,7 @@ onMsg.addListener(
         };
         xhr.send();
       }
-	  
+      
       (function(deg){
         var degnow = 0;
         var ro = function(){
@@ -179,6 +186,7 @@ onMsg.addListener(
         };
         ro();
       })(12);
+
       if(request.format === 'aac') {
         $("#music-pirate #dlink img")[0].src = imgURL_AAC;
       } else if(request.format === 'm4a') {
@@ -187,6 +195,7 @@ onMsg.addListener(
         $("#music-pirate #dlink img")[0].src = imgURL_MP4;
       }
     };
+
     if(request.type === 'music') {
       onMusicReceive();
     }
