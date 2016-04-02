@@ -13,9 +13,11 @@ chrome.webRequest.onBeforeRequest.addListener(
       "http://*/*.mp3*",
       "https://*/*.mp3*",
       "http://*.thesixtyone.com/thesixtyone_production/audio/*",
+      "https://*.thesixtyone.com/thesixtyone_production/audio/*",
       "http://*.file.xiami.com/h/*", //for xiami vip
-      "http://*.bcbits.com/download/track/*", //for bandcamp.com
-      "https://*.indievox.com/audio-streamer.php*",
+      "http://*.bcbits.com/download/track/*",
+      "https://*.bcbits.com/download/track/*", //for bandcamp.com
+      "https://*.indievox.com/audio-streamer.php*"
     ]
   }
 );
@@ -34,10 +36,13 @@ chrome.webRequest.onBeforeRequest.addListener(
       "https://songza.com/*.mp4*",
       "http://songza.com/*.mp4*",
       "http://mn-ecn-prd-http.mndigital.com/*.mp4",
+      "https://mn-ecn-prd-http.mndigital.com/*.mp4",
       "http://fp-limelight.musicnet.com/mp3/*.mp4*",
+      "https://fp-limelight.musicnet.com/mp3/*.mp4*",
       "https://*.douban.com/*.mp4",
       "http://*.douban.com/*.mp4",
       "http://*.doubanio.com/*.mp4",
+      "https://*.doubanio.com/*.mp4",
     ]
   }
 );
@@ -53,7 +58,8 @@ chrome.webRequest.onBeforeRequest.addListener(
   // filters
   {
     urls: [
-      "http://*.grooveshark.com/stream.php*"
+      "http://*.grooveshark.com/stream.php*",
+      "https://*.grooveshark.com/stream.php*"
     ]
   },
   ['requestBody']
