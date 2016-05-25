@@ -92,6 +92,26 @@ chrome.webRequest.onBeforeRequest.addListener(
       "https://*/*.m4a*"
     ]
 });
+
+chrome.webRequest.onBeforeRequest.addListener(
+  function(info) {
+    if (info.type === 'object') {
+      // app-echo上当前音乐信息是通过ajax加载的，而且发生在加载音频流之后。
+      // 所以延迟2秒，再处理。
+      window.setTimeout(function(info) {
+        chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'm3u8', type: 'music'});
+        console.log('info sent3');
+        console.log(info.frameId);
+        console.log(info.parentFrameId );
+      }, 2000, info);
+    }
+  },
+  {
+    urls: [
+      "http://*/*.m3u8?*" // one more song in app-echo.com
+    ]
+});
+
 chrome.webRequest.onBeforeRequest.addListener(function (info) {
     if (info.type === 'other' || info.type === 'object') {
       return {cancel : true};

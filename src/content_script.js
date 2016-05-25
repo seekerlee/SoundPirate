@@ -145,6 +145,11 @@ onMsg.addListener(
           } else if(thisUrl.indexOf('music') > 0) {
             filename = $('.luoo-player .track-name').text() + ' - ' + $('.luoo-player .artist').text();
           }
+      } else if(thisUrl.indexOf('app-echo.com') > 0) {
+        filename = $('section.mp-control h1').text();
+        url = url.replace(/\?.*$/, '?attname=' + encodeURIComponent(filename) + '.m3u8');
+        // use qiniu's setting to get correct filename, so no need to hack
+        window.currentMusicUrl = url;
       }
       
       if(!filename) {
