@@ -1,6 +1,6 @@
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
-    if (info.type === 'other' || info.type === 'object') {
+    if (info.type === 'other' || info.type === 'object' || info.type === 'media') {
       chrome.tabs.sendMessage(info.tabId, {desc: JSON.stringify(info), url: info.url, format: 'mp3', type: 'music'});
       console.log('info sent0');
       console.log(info.requestBody);
@@ -23,7 +23,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
-    if (info.type === 'other' || info.type === 'object') {
+    if (info.type === 'other' || info.type === 'object' || info.type === 'media') {
       chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp4', type: 'music'});
       console.log('info sent0');
       console.log(info.requestBody);
@@ -48,7 +48,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
-    if (info.type === 'other' || info.type === 'object') {
+    if (info.type === 'other' || info.type === 'object' || info.type === 'media') {
       chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music', requestBody: info.requestBody});
       console.log('info sent0');
       console.log(info.requestBody);
@@ -66,7 +66,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
-    if (info.type === 'other' || info.type === 'object') {
+    if (info.type === 'other' || info.type === 'object' || info.type === 'media') {
       chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'aac', type: 'music'});
       console.log('info sent1');
     }
@@ -79,7 +79,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 });
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
-    if (info.type === 'other' || info.type === 'object') {
+    if (info.type === 'other' || info.type === 'object' || info.type === 'media') {
       chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'm4a', type: 'music'});
       console.log('info sent2');
       console.log(info.frameId);
@@ -93,7 +93,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     ]
 });
 chrome.webRequest.onBeforeRequest.addListener(function (info) {
-    if (info.type === 'other' || info.type === 'object') {
+    if (info.type === 'other' || info.type === 'object' || info.type === 'media') {
       return {cancel : true};
     }
 	},
