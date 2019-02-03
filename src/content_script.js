@@ -97,7 +97,7 @@ onMsg.addListener(
       } else if(thisUrl.indexOf('play.baidu.com') > 0) {
         filename = document.title.substr(0, document.title.indexOf(' - 百度音乐盒'));
       } else if(thisUrl.indexOf('y.qq.com') > 0) {
-        filename = $('#divplayer p.music_name').text() + ' - ' + $('#divplayer .music_info_main .singer_name').text();
+        filename = $('#sim_song_info').text();
       } else if(thisUrl.indexOf('music.163.com') > 0) {
         filename = $('.play .words .fc1').text() + ' - ' + $('.play .words .by').text();
       } else if(thisUrl.indexOf('ting.sina.com.cn') > 0) {
