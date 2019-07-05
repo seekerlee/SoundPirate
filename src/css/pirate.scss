@@ -1,0 +1,43 @@
+/*
+<div id="__sound-pirate" class="__sound-pirate-at-left">
+    <a class="__sound-pirate-to-left"><img src="chrome-extension://naaoeihcbaeganoldlfjnomncgdcdnjf/img/arrowl32.png"></a>
+    <a class="__sound-pirate-download" download href=""><img src="chrome-extension://naaoeihcbaeganoldlfjnomncgdcdnjf/img/music32.png"></a>
+    <a class="__sound-pirate-to-right"><img src="chrome-extension://naaoeihcbaeganoldlfjnomncgdcdnjf/img/arrowr32.png"></a>
+</div>
+*/
+#__sound-pirate {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    z-index: 2147483647;
+}
+
+.__sound-pirate-at-left, .__sound-pirate-at-right {
+    .__sound-pirate-to-left {
+        visibility: hidden;
+    }
+    .__sound-pirate-to-right {
+        visibility: hidden;
+    }
+}
+
+.__sound-pirate-at-left {
+    left: 0;
+    &:hover {
+        .__sound-pirate-to-right {
+            visibility: visible;
+        }
+    }
+}
+.__sound-pirate-at-right {
+    right: 0;
+    &:hover {
+        .__sound-pirate-to-left {
+            visibility: visible;
+        }
+    }
+}

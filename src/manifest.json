@@ -1,0 +1,35 @@
+{
+  "name": "Chrome Extension Webpack",
+  "options_page": "options.html",
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": ["webRequest", "activeTab","tabs", "webRequestBlocking", "downloads",
+                  "<all_urls>"],
+  "browser_action": {
+    "default_icon": "icon-34.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.bundle.js"],
+	  "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "128": "icon-128.png"
+  },
+  "web_accessible_resources": [
+       "img/music16.png",
+       "img/music24.png",
+       "img/music32.png",
+       "img/music48.png",
+       "img/arrowl32.png",
+       "img/arrowr32.png",
+       "img/m4a32.png",
+       "img/aac32.png",
+       "img/mp432.png"
+  ],
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
