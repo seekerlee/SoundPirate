@@ -5,39 +5,57 @@
     <a class="__sound-pirate-to-right"><img src="chrome-extension://naaoeihcbaeganoldlfjnomncgdcdnjf/img/arrowr32.png"></a>
 </div>
 */
+$base-margin: 4px;
+$base-width: 32px;
 #__sound-pirate {
-    margin: 0;
+    margin: 0 $base-margin $base-margin $base-margin;
     padding: 0;
     box-sizing: border-box;
 
+    width: $base-width;
     position: fixed;
     bottom: 0;
+    left: 0;
     display: flex;
     z-index: 2147483647;
-}
+    cursor: pointer;
 
-.__sound-pirate-at-left, .__sound-pirate-at-right {
+    transition: left 1s ease;
+    
+    .__sound-pirate-to-left, .__sound-pirate-to-right {
+        display: none;
+        position: absolute;
+    }
     .__sound-pirate-to-left {
-        visibility: hidden;
+        right: 100%;
     }
     .__sound-pirate-to-right {
-        visibility: hidden;
+        left: 100%
     }
-}
 
-.__sound-pirate-at-left {
-    left: 0;
-    &:hover {
-        .__sound-pirate-to-right {
-            visibility: visible;
-        }
+    &.__sound-pirate-at-left:hover .__sound-pirate-to-right {
+        display: unset;
     }
-}
-.__sound-pirate-at-right {
-    right: 0;
-    &:hover {
-        .__sound-pirate-to-left {
-            visibility: visible;
-        }
+    &.__sound-pirate-at-right:hover .__sound-pirate-to-left {
+        display: unset;
+    }
+
+    &.__sound-pirate-at-right {
+        left: calc(100% - #{$base-width} - #{$base-margin});
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    img {
+        display: block;
+    }
+
+    .__sound-pirate-download {
+        transform: rotate(0turn);
+        transition: transform 1s ease;
     }
 }

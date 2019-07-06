@@ -12,15 +12,11 @@ const IMG_MP4   = chrome.extension.getURL("img/mp432.png");
 const IMG_LEFT  = chrome.extension.getURL("img/arrowl32.png");
 const IMG_RIGHT = chrome.extension.getURL("img/arrowr32.png");
 
-function createElementFromHTML(htmlString) {
-    const div = document.createElement('div');
-    return div.firstChild; 
-}
-
 let pirateDiv = null
 let downLoadA = null
 let musicIMG = null
 
+let rotateTurn = 0
 /*
 `<div id="${WRAPPED_ID}" class="${position}">
     <a class="${CLASS_TO_LEFT}"><img src="${IMG_LEFT}"/></a>
@@ -30,6 +26,13 @@ let musicIMG = null
 */
 function createIfNone() {
     if (pirateDiv) return pirateDiv
+
+    // old version modify:
+    if ( localStorage.piratePosition === 'priate-right' ) {
+        localStorage.piratePosition = WRAPPED_CLASS_RIGHT
+    } else if ( localStorage.piratePosition === 'priate-left' ) {
+        localStorage.removeItem('piratePosition')
+    }
 
     const positionClass = localStorage.piratePosition || WRAPPED_CLASS_LEFT
     pirateDiv = document.createElement('div')
@@ -44,7 +47,20 @@ function createIfNone() {
 
     downLoadA = pirateDiv.querySelector(`.${CLASS_DOWNLOAD}`)
     // add actions
+    const btnToLeft = pirateDiv.querySelector(`.${CLASS_TO_LEFT}`)
+    const btnToright = pirateDiv.querySelector(`.${CLASS_TO_RIGHT}`)
 
+    function togglePosition() {
+        pirateDiv.classList.toggle(WRAPPED_CLASS_RIGHT)
+    }
+
+    btnToLeft.onclick = togglePosition
+    btnToright.onclick = togglePosition
+}
+
+function rotate() {
+    rotateTurn += 1
+    downLoadA.style.transform = `rotate(${rotateTurn}turn)`
 }
 
 export function setSoundName(name) {
@@ -55,6 +71,7 @@ export function setSoundName(name) {
     }
     downLoadA.setAttribute('title', name)
 }
+
 
 export function newSound(soundInfo) {
     createIfNone()
@@ -67,6 +84,8 @@ export function newSound(soundInfo) {
     }
 
     setSoundName(name)
+    // run animation
+    window.requestAnimationFrame(rotate)
 
     if (format) {
         // change icon

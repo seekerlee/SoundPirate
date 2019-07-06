@@ -2,8 +2,6 @@ import { addMessageListener, addHeaderListener, sendTabsMsg } from '../browser'
 import { newSound } from '../page/link'
 import { setLatestSoundURL, setLatestSoundName, downloadLatestSound } from '../backgroundAction/soundInfo'
 
-const REGEX = /^https?:\/\/(.+\.)?douban\.fm(\/|(\/.+)?)$/mg
-const SOUND_FORMAT = 'mp4'
 /*
 
 */
@@ -11,6 +9,7 @@ function backAction() {
     addHeaderListener(
         info => {
             if (info.tabId !== -1) {
+                info.soundFormat = 'mp4'
                 sendTabsMsg(info.tabId, info)
                 setLatestSoundURL(info.url)
             }
@@ -26,20 +25,20 @@ function backAction() {
 }
 
 function shouldHandle() {
-    return REGEX.test(window.location.href)
+    return document.domain === 'fm.douban.com' || document.domain === 'douban.fm'
 }
 
 function pageAction() {
     const handle = shouldHandle()
     if (handle) {
-        addMessageListener(() => {
+        addMessageListener((info) => {
             const songInfo = JSON.parse(localStorage.simpleStorage)
             const current_song = songInfo["douradio-player-state"].current_song;
             const name = current_song.title + ' - ' + current_song.artist;
-            setLatestSoundName(name + '.' + SOUND_FORMAT)
+            setLatestSoundName(name + '.' + info.soundFormat)
             newSound({
                 name,
-                format: SOUND_FORMAT,
+                format: info.soundFormat,
                 action: downloadLatestSound
             })
         })
