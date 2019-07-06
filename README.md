@@ -29,12 +29,9 @@ The following websites have been tested to support
 3. 打开在线音乐网页，播放音乐
 4. 音乐成功播放后，左下角/右下角会出现下载链接，点击下载
 
-### 附上各网站比特率
-豆瓣FM <=64kbps, 豆瓣音乐人 >=160kbps, 虾米 128kbps, songtaste 128kbps, 落网 128kbps, 人人电台 96kbps, QQ音乐 128kbps, 网易云音乐 160kbps, 新浪乐库 128kbps, 搜狗音乐 128kbps.
-
 报告bug，提建议请建 issue
 
-How to develop?
+How to develop or build your own SoundPirate
 ============
 0. make sure you have nodejs installed
 1. clone this repo, and cd inside
