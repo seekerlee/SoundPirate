@@ -34,7 +34,7 @@ The following websites have been tested to support
 How to develop or build your own SoundPirate
 ============
 0. make sure you have nodejs installed
-1. clone this repo, and cd inside
+1. clone this repo, and cd inside: `git clone git@github.com:seekerlee/SoundPirate.git`; `cd SoundPirate`
 2. run `npm install`
 3. to develop: `npm run start`
 4. to build: `npm run build`
