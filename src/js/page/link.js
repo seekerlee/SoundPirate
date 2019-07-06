@@ -44,8 +44,9 @@ function createIfNone() {
     <a class="${CLASS_TO_RIGHT}"><img src="${IMG_RIGHT}"/></a>`
 
     document.body.appendChild(pirateDiv)
-
+    
     downLoadA = pirateDiv.querySelector(`.${CLASS_DOWNLOAD}`)
+    musicIMG = downLoadA.querySelector('img')
     // add actions
     const btnToLeft = pirateDiv.querySelector(`.${CLASS_TO_LEFT}`)
     const btnToright = pirateDiv.querySelector(`.${CLASS_TO_RIGHT}`)
@@ -87,8 +88,13 @@ export function newSound(soundInfo) {
     // run animation
     window.requestAnimationFrame(rotate)
 
-    if (format) {
-        // change icon
+    // change icon
+    if (format === 'aac') {
+        musicIMG.setAttribute('src', IMG_AAC)
+    } else if (format === 'mp4') {
+        musicIMG.setAttribute('src', IMG_MP4)
+    } else if (format === 'm4a') {
+        musicIMG.setAttribute('src', IMG_M4A)
     }
 
     if (action) {

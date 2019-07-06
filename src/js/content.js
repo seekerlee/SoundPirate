@@ -11,7 +11,7 @@ for (const key of files.keys()) {
     handled = files(key).pageAction()
     
     if (handled) {
-        console.log("SoundPirate directly support this website")
+        console.log("SoundPirate know this website")
         break
     }
 }
