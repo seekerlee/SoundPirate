@@ -39,7 +39,7 @@ How to develop or build your own SoundPirate
 3. to develop: `npm run start`
 4. to build: `npm run build`
 5. remove/disable SoundPirate if you already installed from Chrome Webstore
-6. open url chrome://extensions/ in chrome, and click 'load unpacked' button and select the build folder. 
+6. open url chrome://extensions/ in chrome, turn on 'Developer mode' and click 'load unpacked' button and select the build folder. 
 7. listen and test
 
 src/js/service/qq.js is a good example to start.
