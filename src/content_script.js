@@ -45,7 +45,7 @@ onMsg.addListener(
       var filename;
       var url = request.url;
       //xiami radio will preload the next song
-      if(thisUrl.indexOf('www.xiami.com/radio') > 0) {
+      if(thisUrl.indexOf('www.xiami.com/radio') > 0) { // good
         if(requestQ.indexOf(url) != -1) return; //when download, another request will be fired. Drop this.
         requestQ.push(request.url);
         if(requestQ.length > 2) {
@@ -53,11 +53,11 @@ onMsg.addListener(
         }
         url = requestQ[0];
       }
-      if(thisUrl.indexOf('www.xiami.com') > 0) {
+      if(thisUrl.indexOf('www.xiami.com') > 0) { // good
         //var songTitle = $(".ui-track-current .ui-row-item-body .c1").text();
         //var songArtist = $(".ui-track-current .ui-row-item-body .c2").text();
         filename = $.trim($('#J_trackInfo').text());
-      } else if(thisUrl.indexOf('douban.fm') > 0) {
+      } else if(thisUrl.indexOf('douban.fm') > 0) { // good
         if ($(".fullplayer").length) { // 新版
           var songInfo = JSON.parse(localStorage.simpleStorage);
           if(songInfo !== undefined)
@@ -71,13 +71,13 @@ onMsg.addListener(
         if (filename === undefined) {
           filename = document.title.substr(0, document.title.indexOf(' - '));
         }
-      } else if(thisUrl.indexOf('music.douban.com/artists/') > 0) {
+      } else if(thisUrl.indexOf('music.douban.com/artists/') > 0) { // good
         filename = $('.item-stat-play').attr('data-songname') + ' - ' + $('.artist-name a', $('.item-stat-play').parent().parent()).text();
-      } else if(thisUrl.indexOf('www.songtaste.com/song') > 0) {
+      } else if(thisUrl.indexOf('www.songtaste.com/song') > 0) { // down
         filename = $('.mid_tit').text();
-      } else if(thisUrl.indexOf('www.songtaste.com/playmusic.php') > 0) {
+      } else if(thisUrl.indexOf('www.songtaste.com/playmusic.php') > 0) { // down
         filename = $.trim($('#songInfo a').text());
-      } else if(thisUrl.indexOf('jing.fm') > 0) { //http://cc.cdn.jing.fm/201307271917/310d548af7024a96eb680a5be85f1105/2012/0716/07/NX/2012071607NXJ.m4a?start=68
+      } else if(thisUrl.indexOf('jing.fm') > 0) { //down 域名都挂了
         if(thisUrl.indexOf('jing.fm/tracks/') > 0) {
           filename = document.title.substr(2, document.title.indexOf(' - Jing') - 2);
         } else {
@@ -92,31 +92,31 @@ onMsg.addListener(
         if(url.indexOf('?') > 0) {
           url = url.substr(0, url.indexOf('?'));
         }
-      } else if(thisUrl.indexOf('fm.renren.com') > 0) {
+      } else if(thisUrl.indexOf('fm.renren.com') > 0) { //down
         filename = $('#song_name').text() + ' - ' +$('#artist_name a[title]').text();
-      } else if(thisUrl.indexOf('play.baidu.com') > 0) {
+      } else if(thisUrl.indexOf('play.baidu.com') > 0) { // => http://play.taihe.com/
         filename = document.title.substr(0, document.title.indexOf(' - 百度音乐盒'));
-      } else if(thisUrl.indexOf('y.qq.com') > 0) {
+      } else if(thisUrl.indexOf('y.qq.com') > 0) { // good
         filename = $('#sim_song_info').text();
-      } else if(thisUrl.indexOf('music.163.com') > 0) {
+      } else if(thisUrl.indexOf('music.163.com') > 0) { // good
         filename = $('.play .words .fc1').text() + ' - ' + $('.play .words .by').text();
-      } else if(thisUrl.indexOf('ting.sina.com.cn') > 0) {
+      } else if(thisUrl.indexOf('ting.sina.com.cn') > 0) { //down
         filename = document.title.substr(0, document.title.indexOf(' - '));
-      } else if(thisUrl.indexOf('player.mbox.sogou.com') > 0) {
+      } else if(thisUrl.indexOf('player.mbox.sogou.com') > 0) { //转到qq音乐
         filename = document.title.substr(5, document.title.indexOf('-搜狗音乐') - 5);
-      } else if(thisUrl.indexOf('soundcloud.com') > 0) {
+      } else if(thisUrl.indexOf('soundcloud.com') > 0) { //good
         filename = document.title;
-      } else if(thisUrl.indexOf('fm.qq.com') > 0) {
+      } else if(thisUrl.indexOf('fm.qq.com') > 0) { // 不是音乐了
         filename = $('#divsongname').text();
-      } else if(thisUrl.indexOf('kuwo.cn') > 0) {
+      } else if(thisUrl.indexOf('kuwo.cn') > 0) { //good
         filename = document.title.substr(0, document.title.indexOf(' 在线试听'));
-      } else if(thisUrl.indexOf('bandcamp.com') > 0) {
+      } else if(thisUrl.indexOf('bandcamp.com') > 0) { // rule changed
         filename = document.title;
-      } else if(thisUrl.indexOf('indievox.com') > 0) {
+      } else if(thisUrl.indexOf('indievox.com') > 0) { // 没有听的地方
         filename = $('#songLink').text() + " - " + $('#artistLink').text() + " - " + $('#albumLink').text();
-      } else if(thisUrl.indexOf('music.so.com') > 0) {
+      } else if(thisUrl.indexOf('music.so.com') > 0) { // down
         filename = document.title.substr(0, document.title.indexOf(' - 360音乐盒'));
-      } else if(thisUrl.indexOf('5sing.com') > 0) {
+      } else if(thisUrl.indexOf('5sing.com') > 0) { // down
         if(thisUrl.indexOf('fc.5sing.com') > 0) {
           // 5sing 翻唱
           filename = $('.mc_info h1').text() + ' - ' + $('.blue strong').text();
@@ -130,12 +130,12 @@ onMsg.addListener(
           // 5sing 电台
           filename = $('.sup span a').text();
         }
-      } else if(thisUrl.indexOf('grooveshark.com') > 0) {
+      } else if(thisUrl.indexOf('grooveshark.com') > 0) { // down
           filename = $('#now-playing-metadata .song').text() + ' - ' + $('#now-playing-metadata .artist').text();
           url = url + '?streamKey=' + request.requestBody.formData['streamKey'];
-      } else if(thisUrl.indexOf('thesixtyone.com') > 0) {
+      } else if(thisUrl.indexOf('thesixtyone.com') > 0) { // down 域名挂了
           filename = $('#song_panel_title').text() + ' - ' + $('#song_panel_artist').text();
-      } else if(thisUrl.indexOf('luoo.net') > 0) {
+      } else if(thisUrl.indexOf('luoo.net') > 0) { // down
           if(thisUrl.indexOf('discover') > 0) {
             filename = $('#lnTrackName').text();
           } else if(thisUrl.indexOf('essay') > 0) {
@@ -145,7 +145,7 @@ onMsg.addListener(
           } else if(thisUrl.indexOf('music') > 0) {
             filename = $('.luoo-player .track-name').text() + ' - ' + $('.luoo-player .artist').text();
           }
-      } else if(thisUrl.indexOf('app-echo.com') > 0) {
+      } else if(thisUrl.indexOf('app-echo.com') > 0) { // good
         filename = $('section.mp-control h1').text();
         url = url.replace(/\?.*$/, '?attname=' + encodeURIComponent(filename) + '.m3u8');
         // use qiniu's setting to get correct filename, so no need to hack

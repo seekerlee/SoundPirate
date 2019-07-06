@@ -34,11 +34,11 @@ chrome.webRequest.onBeforeRequest.addListener(
   // filters
   {
     urls: [
-      "https://songza.com/*.mp4*",
+      "https://songza.com/*.mp4*", //down
       "http://songza.com/*.mp4*",
-      "http://mn-ecn-prd-http.mndigital.com/*.mp4",
+      "http://mn-ecn-prd-http.mndigital.com/*.mp4",//down
       "https://mn-ecn-prd-http.mndigital.com/*.mp4",
-      "http://fp-limelight.musicnet.com/mp3/*.mp4*",
+      "http://fp-limelight.musicnet.com/mp3/*.mp4*", //down
       "https://fp-limelight.musicnet.com/mp3/*.mp4*",
       "https://*.douban.com/*.mp4",
       "http://*.douban.com/*.mp4",
@@ -46,24 +46,6 @@ chrome.webRequest.onBeforeRequest.addListener(
       "https://*.doubanio.com/*.mp4",
     ]
   }
-);
-chrome.webRequest.onBeforeRequest.addListener(
-  function(info) {
-    if (info.type === 'other' || info.type === 'object' || info.type === 'media') {
-      chrome.tabs.sendMessage(info.tabId, {desc: "You got a new song!", url: info.url, format: 'mp3', type: 'music', requestBody: info.requestBody});
-      console.log('info sent0');
-      console.log(info.requestBody);
-      console.log(info );
-    }
-  },
-  // filters
-  {
-    urls: [
-      "http://*.grooveshark.com/stream.php*",
-      "https://*.grooveshark.com/stream.php*"
-    ]
-  },
-  ['requestBody']
 );
 chrome.webRequest.onBeforeRequest.addListener(
   function(info) {
