@@ -1,113 +1,60 @@
-# Chrome Extension Webpack Boilerplate
+SoundPirate Chrome Extension
+============
 
-A basic foundation boilerplate for rich Chrome Extensions using [Webpack](https://webpack.github.io/) to help you write modular and modern Javascript code, load CSS easily and [automatic reload the browser on code changes](https://webpack.github.io/docs/webpack-dev-server.html#automatic-refresh).
+### "Grabbing Your Favourite Sound Like a Pirate!"
 
-## Developing a new extension
-_I'll assume that you already read the [Webpack docs](https://webpack.github.io/docs) and the [Chrome Extension](https://developer.chrome.com/extensions/getstarted) docs._
+1. Checkout your Chrome version is 24+
+2. Download and install the extension, either through [Chrome WebStore](https://chrome.google.com/webstore/detail/声海盗/idleenniidjlnmnjkjmmnocnkmjibadd)( for Stable Version ) , or [Github](https://github.com/spiderPan/Sound-Pirate) ( for Dev version)
+3. Go to online music website and enjoy the music.
+4. Once you see the small icon show up on left bottom conner, that means Sound Pirate is ready to grab that music!
 
+### Wanna put any comments or feedback?
+Seeker Lee [@Github](https://github.com/seekerlee) or
+Pan[@Github] (https://github.com/spiderPan), [@Facebook](https://www.facebook.com/banglanfeng.pan)
 
-1. Check if your Node.js version is >= 6.
-2. Clone the repository.
-3. Install [yarn](https://yarnpkg.com/lang/en/docs/install/).
-4. Run `yarn`.
-5. Change the package's name and description on `package.json`.
-6. Change the name of your extension on `src/manifest.json`.
-7. Run `npm run start`
-8. Load your extension on Chrome following:
-    1. Access `chrome://extensions/`
-    2. Check `Developer mode`
-    3. Click on `Load unpacked extension`
-    4. Select the `build` folder.
-8. Have fun.
-
-## Structure
-All your extension's development code must be placed in `src` folder, including the extension manifest.
-
-The boilerplate is already prepared to have a popup, a options page and a background page. You can easily customize this.
-
-Each page has its own [assets package defined](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate/blob/master/webpack.config.js#L16-L20). So, to code on popup you must start your code on `src/js/popup.js`, for example.
-
-You must use the [ES6 modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) to a better code organization. The boilerplate is already prepared to that and [here you have a little example](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate/blob/master/src/js/popup.js#L2-L4).
-
-## Webpack auto-reload and HRM
-To make your workflow much more efficient this boilerplate uses the [webpack server](https://webpack.github.io/docs/webpack-dev-server.html) to development (started with `npm run server`) with auto reload feature that reloads the browser automatically every time that you save some file o your editor.
-
-You can run the dev mode on other port if you want. Just specify the env var `port` like this:
-
-```
-$ PORT=6002 npm run start
-```
-
-## Content Scripts
-
-Although this boilerplate uses the webpack dev server, it's also prepared to write all your bundles files on the disk at every code change, so you can point, on your extension manifest, to your bundles that you want to use as [content scripts](https://developer.chrome.com/extensions/content_scripts), but you need to exclude these entry points from hot reloading [(why?)](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate/issues/4#issuecomment-261788690). To do so you need to expose which entry points are content scripts on the `webpack.config.js` using the `chromeExtensionBoilerplate -> notHotReload` config. Look the example below.
-
-Let's say that you want use the `myContentScript` entry point as content script, so on your `webpack.config.js` you will configure the entry point and exclude it from hot reloading, like this:
-
-```js
-{
-  …
-  entry: {
-    myContentScript: "./src/js/myContentScript.js"
-  },
-  chromeExtensionBoilerplate: {
-    notHotReload: ["myContentScript"]
-  }
-  …
-}
-```
-
-and on your `src/manifest.json`:
-
-```json
-{
-  "content_scripts": [
-    {
-      "matches": ["https://www.google.com/*"],
-      "js": ["myContentScript.bundle.js"]
-    }
-  ]
-}
-
-```
-
-## Packing
-After the development of your extension run the command
-
-```
-$ NODE_ENV=production npm run build
-```
-Now, the content of `build` folder will be the extension ready to be submitted to the Chrome Web Store. Just take a look at the [official guide](https://developer.chrome.com/webstore/publish) to more infos about publishing.
-
-## Secrets
-If you are developing an extension that talks with some API you probably are using different keys for testing and production. Is a good practice you not commit your secret keys and expose to anyone that have access to the repository.
-
-To this task this boilerplate import the file `./secrets.<THE-NODE_ENV>.js` on your modules through the module named as `secrets`, so you can do things like this:
-
-_./secrets.development.js_
-
-```js
-export default { key: "123" };
-```
-
-_./src/popup.js_
-
-```js
-import secrets from "secrets";
-ApiCall({ key: secrets.key });
-```
-:point_right: The files with name `secrets.*.js` already are ignored on the repository.
-
-## With React.js
-:bulb: If you want use [React.js](https://facebook.github.io/react/) with this boilerplate, check the **[react branch](https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate/tree/react)**.
+### Note
+The following websites have been tested to support 
+[Douban FM](http://douban.fm/)，[Douban Artists](http://music.douban.com/artists/)，[Xiami](http://www.xiami.com/)，[QQ music](http://y.qq.com/)，[163 music](http://music.163.com/)，[Kuwo](http://kuwo.cn)
 
 
-## Contributing
+声海盗
+============
 
-1. **Please!! Do not create a pull request without an issue before discussing the problem.**
-2. On your PR make sure that you are following the current codebase style.
-3. Your PR must be single purpose. Resolve just one problem on your PR.
-4. Make sure to commit in the same style that we are committing until now on the project.
+### 声海盗-下载在线音乐的Chrome插件
+支持[豆瓣FM](http://douban.fm/)，[豆瓣音乐人](http://music.douban.com/artists/)，[虾米](http://www.xiami.com/)，[QQ音乐](http://y.qq.com/)，[网易云音乐](http://music.163.com/)，[酷我](http://kuwo.cn)，[echo回声](http://www.app-echo.com)等.
 
--------------
-Samuel Simões ~ [@samuelsimoes](https://twitter.com/samuelsimoes) ~ [Blog](http://blog.samuelsimoes.com/)
+### 使用方法：
+1. 升级你的chrome或其他chrome核浏览器(已知支持枫树浏览器，360急速浏览器最新版)，已知支持chrome内核24+版本
+2. 安装此插件([Chrome WebStore链接](https://chrome.google.com/webstore/detail/声海盗/idleenniidjlnmnjkjmmnocnkmjibadd))
+3. 打开在线音乐网页，播放音乐
+4. 音乐成功播放后，左下角/右下角会出现下载链接，点击下载
+
+### 附上各网站比特率
+豆瓣FM <=64kbps, 豆瓣音乐人 >=160kbps, 虾米 128kbps, songtaste 128kbps, 落网 128kbps, 人人电台 96kbps, QQ音乐 128kbps, 网易云音乐 160kbps, 新浪乐库 128kbps, 搜狗音乐 128kbps.
+
+报告bug，提建议请建 issue
+
+How to develop?
+============
+0. make sure you have nodejs installed
+1. clone this repo, and cd inside
+2. run `npm install`
+3. to develop: `npm run start`
+4. to build: `npm run build`
+5. remove/disable SoundPirate if you already installed from Chrome Webstore
+6. open url chrome://extensions/ in chrome, and click 'load unpacked' button and select the build folder. 
+7. listen and test
+
+src/js/service/qq.js is a good example to start.
+
+TODO:
+1. support m3u8 if possible
+2. add options
+
+New in 2.0:
+1. Rewrite the code. It should be easier to understand and maintain.
+2. Add more service should be easier.
+3. Fixed some old bugs, performance issues.
+4. Remove a few dead services
+
+credit to https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate

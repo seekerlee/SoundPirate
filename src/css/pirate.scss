@@ -16,7 +16,6 @@ $base-width: 32px;
     position: fixed;
     bottom: 0;
     left: 0;
-    display: flex;
     z-index: 2147483647;
     cursor: pointer;
 
@@ -25,6 +24,8 @@ $base-width: 32px;
     .__sound-pirate-to-left, .__sound-pirate-to-right {
         display: none;
         position: absolute;
+        width: 14px; // some website need this
+        top: 0; // some website need this
     }
     .__sound-pirate-to-left {
         right: 100%;
@@ -34,10 +35,10 @@ $base-width: 32px;
     }
 
     &.__sound-pirate-at-left:hover .__sound-pirate-to-right {
-        display: unset;
+        display: block;
     }
     &.__sound-pirate-at-right:hover .__sound-pirate-to-left {
-        display: unset;
+        display: block;
     }
 
     &.__sound-pirate-at-right {
@@ -55,6 +56,7 @@ $base-width: 32px;
     }
 
     .__sound-pirate-download {
+        display: block;
         transform: rotate(0turn);
         transition: transform 1s ease;
     }
