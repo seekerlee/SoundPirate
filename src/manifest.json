@@ -1,14 +1,13 @@
 {
-  "name": "Chrome Extension Webpack",
+  "name": "__MSG_name__",
+  "version": "2.0.0",
+  "description": "__MSG_description__",
   "options_page": "options.html",
   "background": {
     "page": "background.html"
   },
   "permissions": ["webRequest", "activeTab","tabs", "webRequestBlocking", "downloads",
                   "<all_urls>"],
-  "browser_action": {
-    "default_icon": "icon-34.png"
-  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -16,8 +15,13 @@
 	  "run_at": "document_end"
     }
   ],
+  "browser_action": {
+    "default_icon": "img/music128.png"
+  },
   "icons": {
-    "128": "icon-128.png"
+    "16" : "img/music16.png",
+    "48" : "img/music48.png",
+    "128": "img/music128.png"
   },
   "web_accessible_resources": [
        "img/music16.png",
@@ -31,5 +35,6 @@
        "img/mp432.png"
   ],
   "manifest_version": 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "default_locale" : "zh_CN"
 }

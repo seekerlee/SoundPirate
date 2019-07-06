@@ -89,6 +89,9 @@ var options = {
     },{
         from: 'src/img',
         to: 'img',
+    },{
+        from: 'src/_locales',
+        to: '_locales',
     }]),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src", "options.html"),
