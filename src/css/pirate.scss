@@ -10,6 +10,7 @@ $base-width: 32px;
 #__sound-pirate {
     margin: 0 $base-margin $base-margin $base-margin;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
 
     width: $base-width;
@@ -20,19 +21,6 @@ $base-width: 32px;
     cursor: pointer;
 
     transition: left 1s ease;
-    
-    .__sound-pirate-to-left, .__sound-pirate-to-right {
-        display: none;
-        position: absolute;
-        width: 14px; // some website need this
-        top: 0; // some website need this
-    }
-    .__sound-pirate-to-left {
-        right: 100%;
-    }
-    .__sound-pirate-to-right {
-        left: 100%
-    }
 
     &.__sound-pirate-at-left:hover .__sound-pirate-to-right {
         display: block;
@@ -49,6 +37,19 @@ $base-width: 32px;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+    
+    .__sound-pirate-to-left, .__sound-pirate-to-right {
+        display: none;
+        position: absolute;
+        width: 14px; // some website need this
+        top: 0; // some website need this
+    }
+    .__sound-pirate-to-left {
+        right: 100%;
+    }
+    .__sound-pirate-to-right {
+        left: 100%
     }
 
     img {

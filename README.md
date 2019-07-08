@@ -55,3 +55,7 @@ New in 2.0:
 4. Remove a few dead services
 
 credit to https://github.com/samuelsimoes/chrome-extension-webpack-boilerplate
+
+LICENCE
+============
+MIT
