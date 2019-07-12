@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "filenamify": "^4.1.0",
-    "lodash-es": "^4.17.11"
+    "lodash-es": "^4.17.14"
   }
 }
