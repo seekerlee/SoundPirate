@@ -57,6 +57,22 @@ function backAction() {
             ]
         }
     )
+    addHeaderListener(
+        info => {
+            if (info.tabId !== -1) {
+                console.log('captured ogg: ' + info.url)
+                info.soundFormat = 'ogg'
+                sendTabsMsg(info.tabId, info)
+                setLatestSoundURL(info.url)
+            }
+        },
+        {
+            urls: [
+                "*://*/*.ogg",
+                "*://*/*.ogg?*"
+            ]
+        }
+    )
 }
 
 function pageAction() {

@@ -1,6 +1,6 @@
 {
   "name": "chrome-extension-webpack",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A boilerplate to chrome extension with webpack",
   "scripts": {
     "build": "node utils/build.js",
