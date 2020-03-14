@@ -2,7 +2,9 @@ SoundPirate Chrome Extension
 ============
 
 Chrome removed this extension from Chrome Web Store, asking for justifications for all of the permissions I use, and justification for their single purpose policy. I'm working on it.
+
 At this moment, I've submitted Sound Pirate to Microsoft Edge Addons(I personally switched to the new Edge browser). This is the URL: https://microsoftedge.microsoft.com/addons/detail/ipikaekeodlapkpkfblbcfkaiebpbkie
+
 I will never do anything harmful with Sound Pirate. And I will never sell this extension to anyone else (I got quite a few emails asking me to sell it). And you guys can always use the source code to build you own Sound Pirate without installing from any store if you want.
 
 ### "Grabbing Your Favourite Sound Like a Pirate!"
